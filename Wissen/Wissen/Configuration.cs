@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace dfms
+namespace Wissen
 {
     class Configuration
     {
-        String ConnectionStr = @"Data Source=DESKTOP-P21EL53\Affaq;Initial Catalog=G06;Integrated Security=True";
+        String ConnectionStr = @"Data Source=DESKTOP-P21EL53;Initial Catalog=Wissen;Integrated Security=True";
         SqlConnection con;
         private static Configuration _instance;
         public static Configuration getInstance()
