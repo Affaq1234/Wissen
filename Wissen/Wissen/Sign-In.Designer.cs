@@ -111,6 +111,7 @@
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.Size = new System.Drawing.Size(234, 27);
             this.tb_Password.TabIndex = 2;
+            this.tb_Password.UseSystemPasswordChar = true;
             this.tb_Password.Enter += new System.EventHandler(this.tb_Password_Enter);
             this.tb_Password.Leave += new System.EventHandler(this.tb_Password_Leave);
             // 

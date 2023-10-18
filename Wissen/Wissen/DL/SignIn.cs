@@ -18,18 +18,18 @@ namespace Wissen.DL
             DataRow d = find_cred(email,password);
             if (d != null)
             {
-                string s = d["Status"].ToString();
+                string s = d["Type"].ToString();
                 if (s == "Teacher")
                 {
-                    MessageBox.Show("Welcome!", "You have logged in as a teacher!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("You have logged in as a teacher!", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (s == "Student")
                 {
-                    MessageBox.Show("Welcome!", "You have logged in as a Student!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show( "You have logged in as a Student!", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("ERROR", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Wrong Credentials", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
