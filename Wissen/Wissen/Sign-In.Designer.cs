@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_In));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.b_Feedback = new System.Windows.Forms.Button();
             this.p_logo = new System.Windows.Forms.PictureBox();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_Password = new System.Windows.Forms.TextBox();
             this.b_Login = new System.Windows.Forms.Button();
-            this.b_Feedback = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lb_sign_up = new System.Windows.Forms.Label();
             this.b_sign_up = new System.Windows.Forms.Button();
@@ -66,6 +66,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(434, 541);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // b_Feedback
+            // 
+            this.b_Feedback.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_Feedback.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.b_Feedback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.b_Feedback.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Feedback.ForeColor = System.Drawing.Color.White;
+            this.b_Feedback.Location = new System.Drawing.Point(146, 474);
+            this.b_Feedback.Name = "b_Feedback";
+            this.b_Feedback.Size = new System.Drawing.Size(142, 44);
+            this.b_Feedback.TabIndex = 4;
+            this.b_Feedback.Text = "Feedback";
+            this.b_Feedback.UseVisualStyleBackColor = false;
             // 
             // p_logo
             // 
@@ -115,20 +129,6 @@
             this.b_Login.UseVisualStyleBackColor = false;
             this.b_Login.Click += new System.EventHandler(this.b_Login_Click);
             // 
-            // b_Feedback
-            // 
-            this.b_Feedback.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.b_Feedback.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.b_Feedback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b_Feedback.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Feedback.ForeColor = System.Drawing.Color.White;
-            this.b_Feedback.Location = new System.Drawing.Point(146, 474);
-            this.b_Feedback.Name = "b_Feedback";
-            this.b_Feedback.Size = new System.Drawing.Size(142, 44);
-            this.b_Feedback.TabIndex = 4;
-            this.b_Feedback.Text = "Feedback";
-            this.b_Feedback.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -169,6 +169,7 @@
             this.b_sign_up.TabIndex = 1;
             this.b_sign_up.Text = "Sign Up";
             this.b_sign_up.UseVisualStyleBackColor = true;
+            this.b_sign_up.Click += new System.EventHandler(this.b_sign_up_Click);
             // 
             // Sign_In
             // 

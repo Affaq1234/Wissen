@@ -60,5 +60,16 @@ namespace Wissen
             sign_in s=new sign_in();
             s.signIn(tb_Email.Text,tb_Password.Text);
         }
+
+        private void b_sign_up_Click(object sender, EventArgs e)
+        {
+            SignUp s = new SignUp();
+            s.ShowDialog();
+            s.FormClosed += new FormClosedEventHandler(closed);
+        }
+        private void closed(object o,EventArgs e) 
+        {
+            this.Show();
+        }
     }
 }
