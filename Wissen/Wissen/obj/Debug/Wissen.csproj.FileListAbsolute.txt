@@ -9,3 +9,4 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.exe
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.pdb
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Sign_In.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.SignUp.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Main.resources

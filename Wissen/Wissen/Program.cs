@@ -16,7 +16,7 @@ namespace Wissen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sign_In());
+            Application.Run(new Student_Main());
         }
     }
 }

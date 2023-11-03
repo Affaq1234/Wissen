@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace Wissen.DL
 {
-    
+    public class studentMain()
+    {
+
+    }
 }
