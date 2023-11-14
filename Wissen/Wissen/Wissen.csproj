@@ -49,10 +49,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="DL\Find Teacher.cs" />
     <Compile Include="DL\General.cs" />
     <Compile Include="DL\SignIn.cs" />
     <Compile Include="DL\SignUp.cs" />
     <Compile Include="DL\Student Main.cs" />
+    <Compile Include="DL\View Teachers.cs" />
+    <Compile Include="Find Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Find Teacher.Designer.cs">
+      <DependentUpon>Find Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search Result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search Result.Designer.cs">
+      <DependentUpon>Search Result.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign-In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +87,18 @@
     <Compile Include="Student Main.Designer.cs">
       <DependentUpon>Student Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Teacher.Designer.cs">
+      <DependentUpon>View Teacher.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Find Teacher.resx">
+      <DependentUpon>Find Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search Result.resx">
+      <DependentUpon>Search Result.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sign-In.resx">
       <DependentUpon>Sign-In.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student Main.resx">
       <DependentUpon>Student Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Teacher.resx">
+      <DependentUpon>View Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
