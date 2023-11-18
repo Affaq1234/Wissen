@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +15,13 @@ namespace Wissen
         [STAThread]
         static void Main()
         {
+            DataTable dt=new DataTable();
+            dt.Columns.Add("ID", typeof(String));
+            DataRow d=dt.NewRow();
+            d["ID"] = "1";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Find_Teacher());
+            Application.Run(new Student_Enroll(d));
         }
     }
 }

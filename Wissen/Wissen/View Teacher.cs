@@ -25,5 +25,22 @@ namespace Wissen
         {
             vt.populate(data,tb_name,tb_qualification,tb_expertise,tb_location,tb_availability,tb_hourlyRate,pb_image);
         }
+
+        private void b_enroll_Click(object sender, EventArgs e)
+        {
+            Student_Enroll s=new Student_Enroll(data);
+            s.Show();
+            this.Hide();
+            s.FormClosed += new FormClosedEventHandler(show);
+        }
+        private void show(object o,EventArgs e) 
+        {
+            this.Show();
+        }
+
+        private void b_assessments_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

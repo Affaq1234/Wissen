@@ -53,6 +53,7 @@
     <Compile Include="DL\General.cs" />
     <Compile Include="DL\SignIn.cs" />
     <Compile Include="DL\SignUp.cs" />
+    <Compile Include="DL\Student Enrolls.cs" />
     <Compile Include="DL\Student Main.cs" />
     <Compile Include="DL\View Teachers.cs" />
     <Compile Include="Find Teacher.cs">
@@ -80,6 +81,12 @@
     </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Enroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Enroll.Designer.cs">
+      <DependentUpon>Student Enroll.cs</DependentUpon>
     </Compile>
     <Compile Include="Student Main.cs">
       <SubType>Form</SubType>
@@ -114,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Enroll.resx">
+      <DependentUpon>Student Enroll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student Main.resx">
       <DependentUpon>Student Main.cs</DependentUpon>

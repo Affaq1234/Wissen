@@ -8,20 +8,25 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Wissen.DL
 {
     public class sign_in() 
     {
+        DataRow data;
         public void signIn(string email,string password)
         {
             DataRow d = find_cred(email,password);
             if (d != null)
             {
+                data=d;
                 string s = d["Type"].ToString();
                 if (s == "Teacher")
                 {
                     MessageBox.Show("You have logged in as a teacher!", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    save_information();
                 }
                 else if (s == "Student")
                 {
@@ -56,6 +61,11 @@ namespace Wissen.DL
                 d = null;
             }
             return d;
+        }
+        private void save_information()
+        {
+            StreamWriter sw = new StreamWriter("File.txt");
+            sw.WriteLine(data["ID"].ToString());
         }
     }
 }
