@@ -14,3 +14,4 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Find_Teacher.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Search_Result.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.View_Teacher.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Enroll.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Enrollments_Requests.resources

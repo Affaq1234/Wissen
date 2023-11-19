@@ -18,10 +18,10 @@ namespace Wissen
             DataTable dt=new DataTable();
             dt.Columns.Add("ID", typeof(String));
             DataRow d=dt.NewRow();
-            d["ID"] = "1";
+            d["ID"] = "2";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Student_Enroll(d));
+            Application.Run(new Teacher_Enrollments_Requests(d));
         }
     }
 }
