@@ -38,8 +38,6 @@
             this.b_enroll = new System.Windows.Forms.Button();
             this.b_message = new System.Windows.Forms.Button();
             this.b_reviews = new System.Windows.Forms.Button();
-            this.b_assessments = new System.Windows.Forms.Button();
-            this.b_payments = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -141,20 +139,18 @@
             this.tableLayoutPanel5.Controls.Add(this.b_enroll, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.b_message, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.b_reviews, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.b_assessments, 0, 5);
-            this.tableLayoutPanel5.Controls.Add(this.b_payments, 0, 6);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 8;
+            this.tableLayoutPanel5.RowCount = 6;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(178, 451);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
@@ -175,7 +171,7 @@
             this.b_enroll.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_enroll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_enroll.ForeColor = System.Drawing.Color.White;
-            this.b_enroll.Location = new System.Drawing.Point(3, 203);
+            this.b_enroll.Location = new System.Drawing.Point(3, 243);
             this.b_enroll.Name = "b_enroll";
             this.b_enroll.Size = new System.Drawing.Size(172, 34);
             this.b_enroll.TabIndex = 4;
@@ -189,7 +185,7 @@
             this.b_message.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_message.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_message.ForeColor = System.Drawing.Color.White;
-            this.b_message.Location = new System.Drawing.Point(3, 243);
+            this.b_message.Location = new System.Drawing.Point(3, 283);
             this.b_message.Name = "b_message";
             this.b_message.Size = new System.Drawing.Size(172, 34);
             this.b_message.TabIndex = 5;
@@ -202,39 +198,12 @@
             this.b_reviews.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_reviews.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_reviews.ForeColor = System.Drawing.Color.White;
-            this.b_reviews.Location = new System.Drawing.Point(3, 283);
+            this.b_reviews.Location = new System.Drawing.Point(3, 323);
             this.b_reviews.Name = "b_reviews";
             this.b_reviews.Size = new System.Drawing.Size(172, 34);
             this.b_reviews.TabIndex = 6;
             this.b_reviews.Text = "Reviews";
             this.b_reviews.UseVisualStyleBackColor = false;
-            // 
-            // b_assessments
-            // 
-            this.b_assessments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_assessments.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.b_assessments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b_assessments.ForeColor = System.Drawing.Color.White;
-            this.b_assessments.Location = new System.Drawing.Point(3, 323);
-            this.b_assessments.Name = "b_assessments";
-            this.b_assessments.Size = new System.Drawing.Size(172, 34);
-            this.b_assessments.TabIndex = 7;
-            this.b_assessments.Text = "Assessments";
-            this.b_assessments.UseVisualStyleBackColor = false;
-            this.b_assessments.Click += new System.EventHandler(this.b_assessments_Click);
-            // 
-            // b_payments
-            // 
-            this.b_payments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_payments.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.b_payments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b_payments.ForeColor = System.Drawing.Color.White;
-            this.b_payments.Location = new System.Drawing.Point(3, 363);
-            this.b_payments.Name = "b_payments";
-            this.b_payments.Size = new System.Drawing.Size(172, 34);
-            this.b_payments.TabIndex = 8;
-            this.b_payments.Text = "Payments";
-            this.b_payments.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel4
             // 
@@ -523,8 +492,6 @@
         private System.Windows.Forms.Button b_enroll;
         private System.Windows.Forms.Button b_message;
         private System.Windows.Forms.Button b_reviews;
-        private System.Windows.Forms.Button b_assessments;
-        private System.Windows.Forms.Button b_payments;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_expertise;

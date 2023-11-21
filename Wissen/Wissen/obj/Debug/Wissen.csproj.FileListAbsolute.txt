@@ -15,3 +15,7 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Search_Result.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.View_Teacher.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Enroll.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Enrollments_Requests.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Add_Assignment.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Sample_Frame.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Submit_Assignment.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Assignmnet_Management.resources

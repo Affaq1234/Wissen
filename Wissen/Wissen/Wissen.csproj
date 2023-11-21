@@ -48,7 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Assignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Assignment.Designer.cs">
+      <DependentUpon>Add Assignment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
+    <Compile Include="DL\Assignment CRUD.cs" />
     <Compile Include="DL\Find Teacher.cs" />
     <Compile Include="DL\General.cs" />
     <Compile Include="DL\SignIn.cs" />
@@ -62,6 +69,12 @@
     </Compile>
     <Compile Include="Find Teacher.Designer.cs">
       <DependentUpon>Find Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample Frame.Designer.cs">
+      <DependentUpon>Sample Frame.cs</DependentUpon>
     </Compile>
     <Compile Include="Search Result.cs">
       <SubType>UserControl</SubType>
@@ -95,11 +108,29 @@
     <Compile Include="Student Main.Designer.cs">
       <DependentUpon>Student Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student Submit Assignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Submit Assignment.Designer.cs">
+      <DependentUpon>Student Submit Assignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher Assignmnet Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher Assignmnet Management.Designer.cs">
+      <DependentUpon>Teacher Assignmnet Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher Enrollments Requests.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Teacher Enrollments Requests.Designer.cs">
       <DependentUpon>Teacher Enrollments Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Enrolled Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Enrolled Students.Designer.cs">
+      <DependentUpon>View Enrolled Students.cs</DependentUpon>
     </Compile>
     <Compile Include="View Teacher.cs">
       <SubType>Form</SubType>
@@ -107,8 +138,14 @@
     <Compile Include="View Teacher.Designer.cs">
       <DependentUpon>View Teacher.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add Assignment.resx">
+      <DependentUpon>Add Assignment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Find Teacher.resx">
       <DependentUpon>Find Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample Frame.resx">
+      <DependentUpon>Sample Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search Result.resx">
       <DependentUpon>Search Result.cs</DependentUpon>
@@ -135,8 +172,17 @@
     <EmbeddedResource Include="Student Main.resx">
       <DependentUpon>Student Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student Submit Assignment.resx">
+      <DependentUpon>Student Submit Assignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher Assignmnet Management.resx">
+      <DependentUpon>Teacher Assignmnet Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher Enrollments Requests.resx">
       <DependentUpon>Teacher Enrollments Requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Enrolled Students.resx">
+      <DependentUpon>View Enrolled Students.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Teacher.resx">
       <DependentUpon>View Teacher.cs</DependentUpon>

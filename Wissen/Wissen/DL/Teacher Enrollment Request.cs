@@ -73,7 +73,7 @@ namespace Wissen.DL
             }
             else
             {
-                MessageBox.Show("No row was selected", "Invalid Row");
+                MessageBox.Show("No row was selected", "Invalid Row!");
             }
         }
     }
