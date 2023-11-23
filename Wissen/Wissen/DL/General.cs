@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace Wissen.DL
 {
@@ -64,6 +66,28 @@ namespace Wissen.DL
                 }
             }
             return true;
+        }
+        public Image ConvertBytesToImage(byte[] imageBytes)
+        {
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    Image image = Image.FromStream(ms);
+                    return image;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error converting bytes to image: " + ex.Message);
+                return null;
+            }
+        }
+        public void MakePictureBoxRound(PictureBox pictureBox)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+            pictureBox.Region = new Region(path);
         }
     }
 }

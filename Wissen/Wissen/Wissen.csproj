@@ -54,8 +54,22 @@
     <Compile Include="Add Assignment.Designer.cs">
       <DependentUpon>Add Assignment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chat item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chat item.Designer.cs">
+      <DependentUpon>Chat item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
     <Compile Include="DL\Assignment CRUD.cs" />
+    <Compile Include="DL\Chat CRUD.cs" />
+    <Compile Include="DL\Conversations CRUD.cs" />
     <Compile Include="DL\Find Teacher.cs" />
     <Compile Include="DL\General.cs" />
     <Compile Include="DL\SignIn.cs" />
@@ -81,6 +95,12 @@
     </Compile>
     <Compile Include="Search Result.Designer.cs">
       <DependentUpon>Search Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="See chats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See chats.Designer.cs">
+      <DependentUpon>See chats.cs</DependentUpon>
     </Compile>
     <Compile Include="Sign-In.cs">
       <SubType>Form</SubType>
@@ -141,6 +161,12 @@
     <EmbeddedResource Include="Add Assignment.resx">
       <DependentUpon>Add Assignment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Chat item.resx">
+      <DependentUpon>Chat item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Find Teacher.resx">
       <DependentUpon>Find Teacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search Result.resx">
       <DependentUpon>Search Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="See chats.resx">
+      <DependentUpon>See chats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign-In.resx">
       <DependentUpon>Sign-In.cs</DependentUpon>

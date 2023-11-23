@@ -191,6 +191,7 @@
             this.b_message.TabIndex = 5;
             this.b_message.Text = "Message";
             this.b_message.UseVisualStyleBackColor = false;
+            this.b_message.Click += new System.EventHandler(this.b_message_Click);
             // 
             // b_reviews
             // 

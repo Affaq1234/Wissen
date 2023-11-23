@@ -19,3 +19,7 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Add_Assignment.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Sample_Frame.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Submit_Assignment.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Assignmnet_Management.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Chat.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.View_Enrolled_Students.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Chat_item.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.See_chats.resources

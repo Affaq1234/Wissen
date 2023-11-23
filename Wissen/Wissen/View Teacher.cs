@@ -42,5 +42,10 @@ namespace Wissen
         {
 
         }
+
+        private void b_message_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
