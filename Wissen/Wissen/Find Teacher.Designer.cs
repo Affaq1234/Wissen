@@ -36,6 +36,9 @@
             this.b_search = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.t_expertise = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.t_availability = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,20 +57,17 @@
             this.t_name = new System.Windows.Forms.TextBox();
             this.b_apply = new System.Windows.Forms.Button();
             this.flp_search = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.t_expertise = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_logo)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -182,6 +182,40 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 451);
             this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.t_expertise, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 167);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(219, 34);
+            this.tableLayoutPanel10.TabIndex = 7;
+            // 
+            // t_expertise
+            // 
+            this.t_expertise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.t_expertise.Location = new System.Drawing.Point(103, 6);
+            this.t_expertise.Name = "t_expertise";
+            this.t_expertise.Size = new System.Drawing.Size(113, 22);
+            this.t_expertise.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(28, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 18);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Expertise";
             // 
             // tableLayoutPanel9
             // 
@@ -389,40 +423,6 @@
             this.flp_search.Size = new System.Drawing.Size(685, 451);
             this.flp_search.TabIndex = 1;
             // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 2;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Controls.Add(this.t_expertise, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 167);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(219, 34);
-            this.tableLayoutPanel10.TabIndex = 7;
-            // 
-            // t_expertise
-            // 
-            this.t_expertise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.t_expertise.Location = new System.Drawing.Point(103, 6);
-            this.t_expertise.Name = "t_expertise";
-            this.t_expertise.Size = new System.Drawing.Size(113, 22);
-            this.t_expertise.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 18);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Expertise";
-            // 
             // Find_Teacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -439,6 +439,8 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -449,8 +451,6 @@
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

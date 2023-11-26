@@ -23,3 +23,16 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Chat.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.View_Enrolled_Students.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Chat_item.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.See_chats.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Payment_Management.resources
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\Newtonsoft.Json.dll
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\Stripe.net.dll
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\Newtonsoft.Json.xml
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\Stripe.net.xml
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\SE Project\Project\Wissen\Wissen\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Payments.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.csproj.CopyComplete

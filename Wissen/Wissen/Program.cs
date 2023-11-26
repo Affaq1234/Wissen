@@ -4,11 +4,13 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wissen.DL;
 
 namespace Wissen
 {
     internal static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,7 +19,7 @@ namespace Wissen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new See_chats());
+            Application.Run(new Sign_In());
         }
     }
 }

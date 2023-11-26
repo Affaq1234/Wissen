@@ -35,8 +35,29 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Stripe.net, Version=43.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.43.4.0\lib\net461\Stripe.net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,7 +97,9 @@
     <Compile Include="DL\SignUp.cs" />
     <Compile Include="DL\Student Enrolls.cs" />
     <Compile Include="DL\Student Main.cs" />
+    <Compile Include="DL\Student Payment.cs" />
     <Compile Include="DL\Teacher Enrollment Request.cs" />
+    <Compile Include="DL\Teacher Payments.cs" />
     <Compile Include="DL\View Teachers.cs" />
     <Compile Include="Find Teacher.cs">
       <SubType>Form</SubType>
@@ -128,6 +151,12 @@
     <Compile Include="Student Main.Designer.cs">
       <DependentUpon>Student Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Payments.Designer.cs">
+      <DependentUpon>Student Payments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student Submit Assignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +174,12 @@
     </Compile>
     <Compile Include="Teacher Enrollments Requests.Designer.cs">
       <DependentUpon>Teacher Enrollments Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher Payment Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher Payment Management.Designer.cs">
+      <DependentUpon>Teacher Payment Management.cs</DependentUpon>
     </Compile>
     <Compile Include="View Enrolled Students.cs">
       <SubType>Form</SubType>
@@ -201,6 +236,9 @@
     <EmbeddedResource Include="Student Main.resx">
       <DependentUpon>Student Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student Payments.resx">
+      <DependentUpon>Student Payments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student Submit Assignment.resx">
       <DependentUpon>Student Submit Assignment.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,12 +248,16 @@
     <EmbeddedResource Include="Teacher Enrollments Requests.resx">
       <DependentUpon>Teacher Enrollments Requests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher Payment Management.resx">
+      <DependentUpon>Teacher Payment Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View Enrolled Students.resx">
       <DependentUpon>View Enrolled Students.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Teacher.resx">
       <DependentUpon>View Teacher.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
