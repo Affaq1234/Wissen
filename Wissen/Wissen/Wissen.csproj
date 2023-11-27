@@ -91,8 +91,10 @@
     <Compile Include="DL\Assignment CRUD.cs" />
     <Compile Include="DL\Chat CRUD.cs" />
     <Compile Include="DL\Conversations CRUD.cs" />
+    <Compile Include="DL\Feedback CRUD.cs" />
     <Compile Include="DL\Find Teacher.cs" />
     <Compile Include="DL\General.cs" />
+    <Compile Include="DL\Review CRUD.cs" />
     <Compile Include="DL\SignIn.cs" />
     <Compile Include="DL\SignUp.cs" />
     <Compile Include="DL\Student Enrolls.cs" />
@@ -101,11 +103,23 @@
     <Compile Include="DL\Teacher Enrollment Request.cs" />
     <Compile Include="DL\Teacher Payments.cs" />
     <Compile Include="DL\View Teachers.cs" />
+    <Compile Include="Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Find Teacher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Find Teacher.Designer.cs">
       <DependentUpon>Find Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
     </Compile>
     <Compile Include="Sample Frame.cs">
       <SubType>Form</SubType>
@@ -181,6 +195,12 @@
     <Compile Include="Teacher Payment Management.Designer.cs">
       <DependentUpon>Teacher Payment Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher Reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher Reviews.Designer.cs">
+      <DependentUpon>Teacher Reviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Enrolled Students.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,8 +222,14 @@
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Find Teacher.resx">
       <DependentUpon>Find Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample Frame.resx">
       <DependentUpon>Sample Frame.cs</DependentUpon>
@@ -250,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher Payment Management.resx">
       <DependentUpon>Teacher Payment Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher Reviews.resx">
+      <DependentUpon>Teacher Reviews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Enrolled Students.resx">
       <DependentUpon>View Enrolled Students.cs</DependentUpon>

@@ -36,3 +36,6 @@ D:\SE Project\Project\Wissen\Wissen\bin\Debug\System.Runtime.CompilerServices.Un
 D:\SE Project\Project\Wissen\Wissen\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Payments.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.csproj.CopyComplete
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Feedback.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Review.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Reviews.resources
