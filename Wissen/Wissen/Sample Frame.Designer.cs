@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sample_Frame));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.b_remove = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.p_logo = new System.Windows.Forms.PictureBox();
-            this.b_remove = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_logo)).BeginInit();
@@ -50,8 +50,22 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(808, 462);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // b_remove
+            // 
+            this.b_remove.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_remove.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.b_remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.b_remove.ForeColor = System.Drawing.Color.White;
+            this.b_remove.Location = new System.Drawing.Point(389, 306);
+            this.b_remove.MinimumSize = new System.Drawing.Size(130, 34);
+            this.b_remove.Name = "b_remove";
+            this.b_remove.Size = new System.Drawing.Size(130, 34);
+            this.b_remove.TabIndex = 10;
+            this.b_remove.Text = "Remove";
+            this.b_remove.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel2
             // 
@@ -67,7 +81,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(802, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 94);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // p_logo
@@ -82,25 +96,11 @@
             this.p_logo.TabIndex = 1;
             this.p_logo.TabStop = false;
             // 
-            // b_remove
-            // 
-            this.b_remove.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.b_remove.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.b_remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b_remove.ForeColor = System.Drawing.Color.White;
-            this.b_remove.Location = new System.Drawing.Point(339, 264);
-            this.b_remove.MinimumSize = new System.Drawing.Size(130, 34);
-            this.b_remove.Name = "b_remove";
-            this.b_remove.Size = new System.Drawing.Size(130, 34);
-            this.b_remove.TabIndex = 10;
-            this.b_remove.Text = "Remove";
-            this.b_remove.UseVisualStyleBackColor = false;
-            // 
             // Sample_Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 462);
+            this.ClientSize = new System.Drawing.Size(908, 546);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Sample_Frame";
             this.Text = "Sample_Frame";

@@ -150,7 +150,8 @@ namespace Wissen.DL
         {
             byte[] file=return_file();
             string assign_id=GetValue(gv, "AssignmentID"), t_id= GetValue(gv, "TeacherID"), s_id= GetValue(gv, "StudentID");
-            if (file != null && assign_id!=null && t_id!=null && s_id!=null)
+            DataRow datas = submitted_assignment(gv);
+            if (file != null && assign_id!=null && t_id!=null && s_id!=null && datas==null)
             {
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("EXEC upload_assignment @assignment_id=@assignment_id1,@tea_id=@tea_id1,@stu_id=@stu_id1,@file_name=@file_name1,@file=@file1;", con);
@@ -161,6 +162,14 @@ namespace Wissen.DL
                 cmd.Parameters.AddWithValue("@file",file);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Assignment uploaded successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if(datas!=null)
+            {
+                MessageBox.Show("Assignment against this id has already been submitted!", "Already Uploaded!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+               
             }
         }
         public byte[] return_file()
@@ -260,6 +269,69 @@ namespace Wissen.DL
             gv.DataSource = null;
             gv.DataSource= dt;
             gv.Refresh();
+        }
+        private DataRow submitted_assignment(DataGridView gv)
+        {
+            string assignment_id = GetValue(gv,"ID");
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("EXEC is_assignment_submitted @id=@id1;", con);
+            cmd.Parameters.AddWithValue("@id1", assignment_id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataRow d;
+            try
+            {
+                d = dt.Rows[0];
+            }
+            catch
+            {
+                d = null;
+            }
+            return d;
+        }
+        public DataRow stats_collection(string student_id)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("EXEC get_progress @stu_id=@stu_id1;", con);
+            cmd.Parameters.AddWithValue("@stu_id1", student_id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataRow d;
+            try
+            {
+                d = dt.Rows[0];
+            }
+            catch
+            {
+                d = null;
+            }
+            return d;
+        }
+        public void add_stats_collection(TextBox total_assignments,TextBox uploaded_assignments,TextBox total_payments,TextBox paid_payments,ProgressBar assignment,ProgressBar payments,Label assignment_percentage,Label payment_percentage,string student_id)
+        {
+            DataRow d=stats_collection(student_id);
+            total_assignments.Text = d["TotalAssignments"].ToString();
+            uploaded_assignments.Text = d["SubmittedAssignments"].ToString();
+            total_payments.Text = d["TotalPayments"].ToString();
+            paid_payments.Text = d["PaidPayments"].ToString();
+            float a_percentage = 0;
+            float p_percentage = 0;
+            if((int)d["TotalPayments"] > 0)
+            {
+                p_percentage = (float)d["PaidPayments"] / (float)d["TotalPayments"];
+                p_percentage = p_percentage * 100;
+            }
+            if((int)d["TotalAssignments"]>0)
+            {
+                a_percentage = (float)d["SubmittedAssignments"] / (float)d["TotalAssignments"];
+                a_percentage=a_percentage * 100;
+            }
+            assignment.Value = (int)a_percentage;
+            payments.Value = (int)p_percentage;
+            assignment_percentage.Text = a_percentage.ToString();
+            payment_percentage.Text = payment_percentage.ToString();
         }
     }
 }
