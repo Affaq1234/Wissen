@@ -150,10 +150,13 @@
             // 
             // gv_bookings
             // 
+            this.gv_bookings.AllowUserToAddRows = false;
+            this.gv_bookings.AllowUserToDeleteRows = false;
             this.gv_bookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv_bookings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_bookings.Location = new System.Drawing.Point(3, 3);
             this.gv_bookings.Name = "gv_bookings";
+            this.gv_bookings.ReadOnly = true;
             this.gv_bookings.RowHeadersWidth = 51;
             this.gv_bookings.RowTemplate.Height = 24;
             this.gv_bookings.Size = new System.Drawing.Size(916, 359);

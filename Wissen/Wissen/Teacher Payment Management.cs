@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+    This C# code defines the 'Teacher_Payment_Management' form:
+    - Represents the interface for managing payment-related functionalities for teachers.
+    - Initializes a 'Teacher_Payments' instance to handle payment management operations.
+    - Implements 'Teacher_Payment_Management_Load' to load payment information specific to the teacher onto 'gv_payments' DataGridView.
+    - Provides functionality to send notifications ('b_send_notification_Click') to students related to payments using 'send_notification' from 'Teacher_Payments'.
+    - Enables the removal of fees ('b_remove_Click') and verification of payments ('b_verify_Click') using respective methods from 'Teacher_Payments'.
+    - Employs exception handling to catch and report any errors that may occur during payment management operations.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,22 +33,54 @@ namespace Wissen
 
         private void Teacher_Payment_Management_Load(object sender, EventArgs e)
         {
-            teacher_Payments.load_payments(gv_payments, data["ID"].ToString());
+            try
+            {
+                teacher_Payments.load_payments(gv_payments, data["ID"].ToString());
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_send_notification_Click(object sender, EventArgs e)
         {
-            teacher_Payments.send_notification(gv_payments);
+            try
+            {
+                teacher_Payments.send_notification(gv_payments);
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_remove_Click(object sender, EventArgs e)
         {
-            teacher_Payments.remove_fee(gv_payments);
+            try
+            {
+                teacher_Payments.remove_fee(gv_payments);
+            }
+            catch(Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_verify_Click(object sender, EventArgs e)
         {
-            teacher_Payments.verify_fee(gv_payments);
+            try
+            {
+                teacher_Payments.verify_fee(gv_payments);
+            }
+            catch (Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

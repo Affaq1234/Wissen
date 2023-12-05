@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+The 'Chat_item' UserControl handles:
+- Initializing and displaying a chat item within the UI, containing the image and name of a user.
+- Launching the 'Chat' form upon clicking the chat button, hiding the current form in the hierarchy.
+- Catches and reports any exceptions that occur during the initialization of the chat item or showing/hiding forms.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,45 +22,55 @@ namespace Wissen
     public partial class Chat_item : UserControl
     {
         DataRow data;
-        public Chat_item(DataRow d)
+        DataRow users;
+        public Chat_item(DataRow d,DataRow user)
         {
             InitializeComponent();
             data = d;
             initialize(d);
-            general general = new general();
+            users = user;
         }
         public void initialize(DataRow d)
         {
-            p_image.Image = ConvertBytesToImage((byte[])d["Image"]);
-            lbl_name.Text = d["Name"].ToString();
-        }
-        public Image ConvertBytesToImage(byte[] imageBytes)
-        {
             try
             {
-                using (MemoryStream ms = new MemoryStream(imageBytes))
-                {
-                    Image image = Image.FromStream(ms);
-                    return image;
-                }
+                general g= new general();
+                p_image.Image = g.ConvertBytesToImage((byte[])d["Image"]);
+                lbl_name.Text = d["Name"].ToString();
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                MessageBox.Show("Error converting bytes to image: " + ex.Message);
-                return null;
+                general g = new general();
+                g.report_error(ex);
             }
         }
 
         private void b_chat_Click(object sender, EventArgs e)
         {
-            Chat c=new Chat(data);
-            c.Show();
-            this.Parent.Parent.Parent.Parent.Hide();
-            c.FormClosed += new FormClosedEventHandler(show);
+            try
+            {
+                Chat c = new Chat(data, users);
+                c.Show();
+                this.Parent.Parent.Parent.Parent.Hide();
+                c.FormClosed += new FormClosedEventHandler(show);
+            }
+            catch(Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
         private void show(object o,EventArgs e)
         {
-            this.Parent.Parent.Parent.Parent.Show();
+            try
+            {
+                this.Parent.Parent.Parent.Parent.Show();
+            }
+            catch (Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

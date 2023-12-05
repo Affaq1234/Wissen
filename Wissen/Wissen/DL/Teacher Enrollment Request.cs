@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+The 'Teacher_Enrollment_Request' class facilitates:
+- Retrieving enrollment requests for a specific teacher and displaying them in a DataGridView by executing a stored procedure.
+- Updating an enrollment request to mark it as accepted in the database.
+- Canceling an enrollment request from the database, based on the selected row in the DataGridView.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -11,6 +18,7 @@ namespace Wissen.DL
 {
     public class Teacher_Enrollment_Request
     {
+        // Retrieves enrollment requests for a specific teacher and displays them in a DataGridView
         public void find_enrollments(DataGridView gv,string t_id)
         {
                 var con = Configuration.getInstance().getConnection();
@@ -24,6 +32,9 @@ namespace Wissen.DL
                 gv.ReadOnly = true;
                 gv.Refresh();
         }
+
+        // Updates an enrollment request to mark it as accepted in the database
+
         public void update_enrollment(DataGridView gv)
         {
             if (gv.SelectedCells.Count > 0)
@@ -50,6 +61,9 @@ namespace Wissen.DL
                 MessageBox.Show("No row was selected","Invalid Row");
             }
         }
+
+        // Cancels an enrollment request from the database
+
         public void cancel_request(DataGridView gv)
         {
             if (gv.SelectedCells.Count > 0)

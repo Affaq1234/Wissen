@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+The 'Add_Assignment' class manages:
+- Adding an assignment for a specific enrollment ID, capturing assignment title and description.
+- Viewing enrolled students associated with a particular assignment through the 'View_Enrolled_Students' form.
+- Catches and reports any exceptions that occur during the addition of assignments or when viewing enrolled students.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,13 +30,29 @@ namespace Wissen
 
         private void b_add_Click(object sender, EventArgs e)
         {
-            AC.add(tb_enrollment_id.Text,tb_assignment_title.Text,tb_assignment_description.Text);
+            try
+            {
+                AC.add(tb_enrollment_id.Text, tb_assignment_title.Text, tb_assignment_description.Text);
+            }
+            catch(Exception ex)
+            {
+                general g=new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_view_students_Click(object sender, EventArgs e)
         {
-            View_Enrolled_Students v= new View_Enrolled_Students(d["ID"].ToString());
-            v.Show();
+            try
+            {
+                View_Enrolled_Students v = new View_Enrolled_Students(d["ID"].ToString());
+                v.Show();
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

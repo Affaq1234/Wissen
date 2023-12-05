@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+The 'signup' class manages the user sign-up functionality for both teachers and students:
+- Handles signing up for teachers by validating and processing their information, including checks for existing email, password matching, format validations, and adding the record to the database.
+- Handles signing up for students similarly, validating and processing their details, including checks for existing email, password matching, format validations, and adding the record to the database.
+- Provides a file dialog to browse and select an image file.
+- Checks if the provided email already exists in the database.
+- Validates the email format.
+*/
+
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +21,10 @@ namespace Wissen.DL
 {
     public class signup()
     {
-        general g_functions = new general();
+        // Handles signing up for teachers
         public bool sign_up_teacher(string email,string password,string c_password,string name,string qualification,string expertise,string hourlyRate,string availability,string Location,string pic_path)
         {
+            general g_functions = new general();
             DataRow d = email_exists(email);
             if(email=="" || password=="" || c_password=="" || name=="" || qualification=="" || expertise=="" || hourlyRate=="" || availability=="" || Location=="" || pic_path=="")
             {
@@ -63,8 +73,12 @@ namespace Wissen.DL
             }
             return true;
         }
+
+        // Handles signing up for students
+
         public bool sign_up_student(string email, string password, string c_password, string name, string education, string subjects, string pic_path)
         {
+            general g_functions = new general();
             DataRow d = email_exists(email);
             if (email == "" || password == "" || c_password == "" || name == "" || education == "" || subjects == "" || pic_path == "")
             {
@@ -106,6 +120,9 @@ namespace Wissen.DL
             }
             return true;
         }
+
+        // Opens a file dialog to browse and select an image file
+
         public void browse(TextBox t)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -124,6 +141,9 @@ namespace Wissen.DL
                 }
             }
         }
+
+        // Checks if the provided email already exists in the database
+
         private DataRow email_exists(string email)
         {
             var con = Configuration.getInstance().getConnection();
@@ -143,6 +163,9 @@ namespace Wissen.DL
             }
             return d;
         }
+
+        // Checks if the email format is valid
+
         public bool IsValidEmailFormat(string email)
         {
             int atIndex = email.IndexOf('@');

@@ -205,6 +205,7 @@
             this.b_reviews.TabIndex = 6;
             this.b_reviews.Text = "Reviews";
             this.b_reviews.UseVisualStyleBackColor = false;
+            this.b_reviews.Click += new System.EventHandler(this.b_reviews_Click);
             // 
             // tableLayoutPanel4
             // 

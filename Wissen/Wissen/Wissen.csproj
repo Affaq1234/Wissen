@@ -94,15 +94,24 @@
     <Compile Include="DL\Feedback CRUD.cs" />
     <Compile Include="DL\Find Teacher.cs" />
     <Compile Include="DL\General.cs" />
+    <Compile Include="DL\Main CRUD.cs" />
+    <Compile Include="DL\Notification CRUD.cs" />
     <Compile Include="DL\Review CRUD.cs" />
     <Compile Include="DL\SignIn.cs" />
     <Compile Include="DL\SignUp.cs" />
     <Compile Include="DL\Student Enrolls.cs" />
-    <Compile Include="DL\Student Main.cs" />
     <Compile Include="DL\Student Payment.cs" />
     <Compile Include="DL\Teacher Enrollment Request.cs" />
     <Compile Include="DL\Teacher Payments.cs" />
+    <Compile Include="DL\User Update.cs" />
     <Compile Include="DL\View Teachers.cs" />
+    <Compile Include="DL\Favourite Student CRUD.cs" />
+    <Compile Include="Favourite students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Favourite students.Designer.cs">
+      <DependentUpon>Favourite students.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,17 +124,29 @@
     <Compile Include="Find Teacher.Designer.cs">
       <DependentUpon>Find Teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notification Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification Management.Designer.cs">
+      <DependentUpon>Notification Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relevent Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relevent Search.Designer.cs">
+      <DependentUpon>Relevent Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Review.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Review.Designer.cs">
       <DependentUpon>Review.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sample Frame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sample Frame.Designer.cs">
-      <DependentUpon>Sample Frame.cs</DependentUpon>
     </Compile>
     <Compile Include="Search Result.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +159,18 @@
     </Compile>
     <Compile Include="See chats.Designer.cs">
       <DependentUpon>See chats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="See Teacher Chats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See Teacher Chats.Designer.cs">
+      <DependentUpon>See Teacher Chats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seen notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seen notification.Designer.cs">
+      <DependentUpon>Seen notification.cs</DependentUpon>
     </Compile>
     <Compile Include="Sign-In.cs">
       <SubType>Form</SubType>
@@ -171,6 +204,12 @@
     <Compile Include="Student Payments.Designer.cs">
       <DependentUpon>Student Payments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student Progress Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Progress Tracking.Designer.cs">
+      <DependentUpon>Student Progress Tracking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student Submit Assignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +228,12 @@
     <Compile Include="Teacher Enrollments Requests.Designer.cs">
       <DependentUpon>Teacher Enrollments Requests.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher Main.Designer.cs">
+      <DependentUpon>Teacher Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher Payment Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +245,18 @@
     </Compile>
     <Compile Include="Teacher Reviews.Designer.cs">
       <DependentUpon>Teacher Reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Student.Designer.cs">
+      <DependentUpon>Update Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Teacher.Designer.cs">
+      <DependentUpon>Update Teacher.cs</DependentUpon>
     </Compile>
     <Compile Include="View Enrolled Students.cs">
       <SubType>Form</SubType>
@@ -222,23 +279,38 @@
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Favourite students.resx">
+      <DependentUpon>Favourite students.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Find Teacher.resx">
       <DependentUpon>Find Teacher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notification Management.resx">
+      <DependentUpon>Notification Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relevent Search.resx">
+      <DependentUpon>Relevent Search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Review.resx">
       <DependentUpon>Review.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sample Frame.resx">
-      <DependentUpon>Sample Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search Result.resx">
       <DependentUpon>Search Result.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="See chats.resx">
       <DependentUpon>See chats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="See Teacher Chats.resx">
+      <DependentUpon>See Teacher Chats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seen notification.resx">
+      <DependentUpon>Seen notification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign-In.resx">
       <DependentUpon>Sign-In.cs</DependentUpon>
@@ -265,6 +337,9 @@
     <EmbeddedResource Include="Student Payments.resx">
       <DependentUpon>Student Payments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student Progress Tracking.resx">
+      <DependentUpon>Student Progress Tracking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student Submit Assignment.resx">
       <DependentUpon>Student Submit Assignment.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,11 +349,20 @@
     <EmbeddedResource Include="Teacher Enrollments Requests.resx">
       <DependentUpon>Teacher Enrollments Requests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher Main.resx">
+      <DependentUpon>Teacher Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher Payment Management.resx">
       <DependentUpon>Teacher Payment Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher Reviews.resx">
       <DependentUpon>Teacher Reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Student.resx">
+      <DependentUpon>Update Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Teacher.resx">
+      <DependentUpon>Update Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Enrolled Students.resx">
       <DependentUpon>View Enrolled Students.cs</DependentUpon>

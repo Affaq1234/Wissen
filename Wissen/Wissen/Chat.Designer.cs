@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chat));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -41,6 +42,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tb_send = new System.Windows.Forms.TextBox();
             this.b_send = new System.Windows.Forms.Button();
+            this.time_check = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_logo)).BeginInit();
@@ -221,6 +223,12 @@
             this.b_send.UseVisualStyleBackColor = false;
             this.b_send.Click += new System.EventHandler(this.b_send_Click);
             // 
+            // time_check
+            // 
+            this.time_check.Enabled = true;
+            this.time_check.Interval = 3000;
+            this.time_check.Tick += new System.EventHandler(this.time_check_Tick);
+            // 
             // Chat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -260,5 +268,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox p_image;
+        private System.Windows.Forms.Timer time_check;
     }
 }

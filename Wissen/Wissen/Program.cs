@@ -17,9 +17,17 @@ namespace Wissen
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Feedback());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Sign_In());
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

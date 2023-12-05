@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+    This C# code defines the 'Student_Payments' form:
+    - Loads payment-related information for the student.
+    - Utilizes the 'Student_Payment' class functionalities to verify payments from teachers and load fee details.
+    - Handles the verification process initiated by the student through the 'b_verify' button.
+    - Loads fee-related information into the DataGridView ('gv_payments') upon form load.
+    - Employs exception handling to catch and report errors that may occur during the payment verification and fee loading processes.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,12 +32,28 @@ namespace Wissen
 
         private void b_verify_Click(object sender, EventArgs e)
         {
-            s.verify_from_teacher(gv_payments);
+            try
+            {
+                s.verify_from_teacher(gv_payments);
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void Student_Payments_Load(object sender, EventArgs e)
         {
-            s.load_fee(gv_payments, data["ID"].ToString());
+            try
+            {
+                s.load_fee(gv_payments, data["ID"].ToString());
+            }
+            catch(Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

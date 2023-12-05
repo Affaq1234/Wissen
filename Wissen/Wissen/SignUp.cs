@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+    This C# code defines the 'SignUp' class, which manages user registration:
+    - Allows teacher registration by obtaining and validating information like email, password, name, qualifications, expertise, hourly rate, availability, and location.
+    - Facilitates student registration by gathering and validating details such as email, password, name, class, subjects, and profile picture.
+    - Employs a 'signup' object to execute registration operations by invoking specific methods for teachers and students.
+    - Offers functionality to browse and select profile pictures for both teachers and students.
+    - Provides help features for users, guiding them on the format to enter qualifications and subjects.
+    - Uses exception handling to report any errors or exceptions that may occur during the registration process.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,22 +31,54 @@ namespace Wissen
 
         private void b_teacher_register_Click(object sender, EventArgs e)
         {
-            s.sign_up_teacher(tb_teacher_email.Text,tb_teacher_password.Text,tb_teacher_confirm_password.Text,tb_teacher_name.Text,tb_teacher_qualification.Text,tb_teacher_Expertise.Text,tb_teacher_hourly_rate.Text,tb_teacher_availability.Text,tb_teacher_location.Text,tb_teacher_picture.Text);
-        }
+            try
+            {
+                s.sign_up_teacher(tb_teacher_email.Text, tb_teacher_password.Text, tb_teacher_confirm_password.Text, tb_teacher_name.Text, tb_teacher_qualification.Text, tb_teacher_Expertise.Text, tb_teacher_hourly_rate.Text, tb_teacher_availability.Text, tb_teacher_location.Text, tb_teacher_picture.Text);
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
+         }
 
         private void b_student_register_Click(object sender, EventArgs e)
         {
-            s.sign_up_student(tb_student_email.Text,tb_student_password.Text,tb_student_confirm_password.Text,tb_student_name.Text,tb_student_class.Text,tb_student_subjects.Text,tb_student_picture.Text);
+            try
+            {
+                s.sign_up_student(tb_student_email.Text, tb_student_password.Text, tb_student_confirm_password.Text, tb_student_name.Text, tb_student_class.Text, tb_student_subjects.Text, tb_student_picture.Text);
+            }
+            catch(Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_browse_teacher_Click(object sender, EventArgs e)
         {
-            s.browse(tb_teacher_picture);
+            try
+            {
+                s.browse(tb_teacher_picture);
+            }
+            catch (Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_browse_student_Click(object sender, EventArgs e)
         {
-            s.browse(tb_student_picture);
+            try
+            {
+                s.browse(tb_student_picture);
+            }
+            catch ( Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_help_teacher_Click(object sender, EventArgs e)

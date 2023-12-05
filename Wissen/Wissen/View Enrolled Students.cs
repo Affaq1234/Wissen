@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+    This C# code defines the 'View_Enrolled_Students' form:
+    - Displays a list of students enrolled with a specific teacher identified by 'teacher_id'.
+    - Upon form load, it populates a DataGridView ('gv_bookings') with enrolled students' information.
+    - Utilizes the 'Assignment_CRUD' instance to retrieve enrolled students' details based on the teacher's ID.
+    - Implements exception handling to catch and report errors that might occur during the retrieval process.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +30,16 @@ namespace Wissen
 
         private void View_Enrolled_Students_Load(object sender, EventArgs e)
         {
-            Assignment_CRUD assignment_CRUD = new Assignment_CRUD();
-            assignment_CRUD.find_enrolled_students(gv_bookings,t_id);
+            try
+            {
+                Assignment_CRUD assignment_CRUD = new Assignment_CRUD();
+                assignment_CRUD.find_enrolled_students(gv_bookings, t_id);
+            }
+            catch (Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

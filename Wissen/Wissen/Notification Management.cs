@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+The 'Notification_Management' class manages notifications for a specific user:
+- Loads notifications when the form is loaded using 'populate_panel' from the 'Notification_CRUD' class.
+- Provides an interface to remove all notifications for the current user when the respective button is clicked.
+- Uses 'general' class to report errors in case of exceptions.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,12 +30,28 @@ namespace Wissen
 
         private void b_remove_all_Click(object sender, EventArgs e)
         {
-            notification.remove_all_notification(data["ID"].ToString());
+            try
+            {
+                notification.remove_all_notification(data["ID"].ToString(),flp_notifications);
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void Notification_Management_Load(object sender, EventArgs e)
         {
-            notification.populate_panel(flp_notifications, data["ID"].ToString());
+            try
+            {
+                notification.populate_panel(flp_notifications, data["ID"].ToString());
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

@@ -112,8 +112,10 @@
             this.p_user.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.p_user.Name = "p_user";
             this.p_user.Size = new System.Drawing.Size(61, 57);
+            this.p_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_user.TabIndex = 1;
             this.p_user.TabStop = false;
+            this.p_user.Click += new System.EventHandler(this.p_user_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -161,6 +163,7 @@
             this.b_english.TabIndex = 11;
             this.b_english.Text = "English";
             this.b_english.UseVisualStyleBackColor = false;
+            this.b_english.Click += new System.EventHandler(this.b_english_Click);
             // 
             // b_computer
             // 
@@ -177,6 +180,7 @@
             this.b_computer.TabIndex = 10;
             this.b_computer.Text = "Computer";
             this.b_computer.UseVisualStyleBackColor = false;
+            this.b_computer.Click += new System.EventHandler(this.b_computer_Click);
             // 
             // b_biology
             // 
@@ -193,6 +197,7 @@
             this.b_biology.TabIndex = 9;
             this.b_biology.Text = "Biology";
             this.b_biology.UseVisualStyleBackColor = false;
+            this.b_biology.Click += new System.EventHandler(this.b_biology_Click);
             // 
             // p_English
             // 
@@ -245,6 +250,7 @@
             this.b_mathematics.TabIndex = 5;
             this.b_mathematics.Text = "Mathematics";
             this.b_mathematics.UseVisualStyleBackColor = false;
+            this.b_mathematics.Click += new System.EventHandler(this.b_mathematics_Click);
             // 
             // b_chemistry
             // 
@@ -261,6 +267,7 @@
             this.b_chemistry.TabIndex = 4;
             this.b_chemistry.Text = "Chemistry";
             this.b_chemistry.UseVisualStyleBackColor = false;
+            this.b_chemistry.Click += new System.EventHandler(this.b_chemistry_Click);
             // 
             // p_mathematics
             // 
@@ -313,6 +320,7 @@
             this.b_physics.TabIndex = 3;
             this.b_physics.Text = "Physics";
             this.b_physics.UseVisualStyleBackColor = false;
+            this.b_physics.Click += new System.EventHandler(this.b_physics_Click);
             // 
             // Student_Main
             // 

@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+The 'sign_in' class manages the user sign-in functionality:
+- It attempts to sign in with a provided email and password.
+- Shows the respective main form (Teacher or Student) based on the user type after successful sign-in.
+- Reduces the number of attempts available for sign-in and provides an error message for wrong credentials.
+- Handles the display of a given form after closing the current form.
+- Finds user credentials in the database using the provided email and password.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,38 +19,67 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Configuration;
+using Stripe.Tax;
 
 namespace Wissen.DL
 {
     public class sign_in() 
     {
-        DataRow data;
-        public void signIn(string email,string password)
+        int tries = 3;
+        Sign_In signed;
+
+        // Attempts to sign in with provided email and password
+
+        public void signIn(string email,string password,Sign_In sign)
         {
-            DataRow d = find_cred(email,password);
-            if (d != null)
+            signed = sign;
+            if (tries > 0)
             {
-                data=d;
-                string s = d["Type"].ToString();
-                if (s == "Teacher")
+                DataRow d = find_cred(email, password);
+                if (d != null)
                 {
-                    MessageBox.Show("You have logged in as a teacher!", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    save_information();
-                }
-                else if (s == "Student")
-                {
-                    MessageBox.Show( "You have logged in as a Student!", "Welcome!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string s = d["Type"].ToString();
+                    if (s == "Teacher")
+                    {
+                        Teacher_Main t=new Teacher_Main(d);
+                        t.Show();
+                        sign.Hide();
+                        t.FormClosed += new FormClosedEventHandler(show);
+                    }
+                    else if (s == "Student")
+                    {
+                        Student_Main stu=new Student_Main(d);
+                        stu.Show();
+                        sign.Hide();
+                        stu.FormClosed += new FormClosedEventHandler(show);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Credentials", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tries = tries - 1;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Wrong Credentials", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("This user does not exists.", "Invalid User!");
                 }
             }
             else
             {
-                MessageBox.Show("This user does not exists.", "Invalid User!");
+                MessageBox.Show("You have entered wrong credentials. To login,restart the application.","Sign In blocked",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
         }
+
+        // Shows given form after closing the current form
+
+        public void show(object o,FormClosedEventArgs a)
+        {
+            signed.Show();
+        }
+
+        // Finds user credentials in the database
+
         private DataRow find_cred(string email,string password)
         {
             var con = Configuration.getInstance().getConnection();
@@ -61,11 +99,6 @@ namespace Wissen.DL
                 d = null;
             }
             return d;
-        }
-        private void save_information()
-        {
-            StreamWriter sw = new StreamWriter("File.txt");
-            sw.WriteLine(data["ID"].ToString());
         }
     }
 }

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+    This C# code defines a 'Find_Teachers' class responsible for teacher search functionalities:
+    - Conducts searches and fills a FlowLayoutPanel with teacher search results, considering expertise or advanced search criteria.
+    - Manages searching for teachers based on multiple attributes like name, qualification, expertise, etc.
+    - Clears the panel content before populating it with fresh search outcomes.
+    - Utilizes SQL commands to interact with a database for search operations.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,8 +65,16 @@ namespace Wissen
 
         private void b_Login_Click(object sender, EventArgs e)
         {
-            sign_in s=new sign_in();
-            s.signIn(tb_Email.Text,tb_Password.Text);
+            try
+            {
+                sign_in s = new sign_in();
+                s.signIn(tb_Email.Text, tb_Password.Text, this);
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_sign_up_Click(object sender, EventArgs e)
@@ -70,6 +86,20 @@ namespace Wissen
         private void closed(object o,EventArgs e) 
         {
             this.Show();
+        }
+
+        private void b_Feedback_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Feedback feedback = new Feedback();
+                feedback.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

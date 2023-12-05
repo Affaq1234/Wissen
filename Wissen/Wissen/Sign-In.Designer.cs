@@ -80,6 +80,7 @@
             this.b_Feedback.TabIndex = 4;
             this.b_Feedback.Text = "Feedback";
             this.b_Feedback.UseVisualStyleBackColor = false;
+            this.b_Feedback.Click += new System.EventHandler(this.b_Feedback_Click);
             // 
             // p_logo
             // 

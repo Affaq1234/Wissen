@@ -16,7 +16,6 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.View_Teacher.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Enroll.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Enrollments_Requests.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Add_Assignment.resources
-D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Sample_Frame.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Submit_Assignment.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Assignmnet_Management.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Chat.resources
@@ -39,3 +38,13 @@ D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.csproj.CopyComplete
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Feedback.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Review.resources
 D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Reviews.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Notification_Management.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Notification.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Relevent_Search.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Seen_notification.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Student_Progress_Tracking.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Teacher_Main.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Favourite_students.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Update_Student.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.Update_Teacher.resources
+D:\SE Project\Project\Wissen\Wissen\obj\Debug\Wissen.See_Teacher_Chats.resources

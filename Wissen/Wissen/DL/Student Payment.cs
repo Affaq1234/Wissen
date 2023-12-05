@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+The 'Student_Payment' class manages:
+- Loading payment information for a specific student into a DataGridView by executing a stored procedure.
+- Verifying payments made by a teacher and sending a notification to the student upon verification.
+- Finding the payment ID of the current cell in the DataGridView, allowing further actions like notification sending.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -11,6 +18,8 @@ namespace Wissen.DL
 {
     public class Student_Payment
     {
+
+        // Loads payment information for a specific student into a DataGridView
         public void load_fee(DataGridView GV,string student_id)
         {
             var con = Configuration.getInstance().getConnection();
@@ -23,6 +32,9 @@ namespace Wissen.DL
             GV.DataSource = dt;
             GV.Refresh();
         }
+
+        // Verifies payment from a teacher and sends a notification to the student
+
         public void verify_from_teacher(DataGridView GV)
         {
             string pay_id = find_current_cell_payid(GV);
@@ -35,6 +47,9 @@ namespace Wissen.DL
                 MessageBox.Show("Notification Successfully sent!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        // Finds the payment ID of the current cell in the DataGridView
+
         public string find_current_cell_payid(DataGridView gv)
         {
             if (gv.SelectedCells.Count > 0)

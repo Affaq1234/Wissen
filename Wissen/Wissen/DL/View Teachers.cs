@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+The 'View_Teachers' class facilitates:
+- Populating the UI fields with teacher information based on the provided DataRow.
+  It assigns values to text boxes and picture box elements for displaying teacher details.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -12,22 +18,7 @@ namespace Wissen.DL
 {
     public class View_Teachers
     {
-        public Image ConvertBytesToImage(byte[] imageBytes)
-        {
-            try
-            {
-                using (MemoryStream ms = new MemoryStream(imageBytes))
-                {
-                    Image image = Image.FromStream(ms);
-                    return image;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error converting bytes to image: " + ex.Message);
-                return null;
-            }
-        }
+        // Populates the UI fields with teacher information based on the provided DataRow
         public void populate(DataRow data,TextBox name,TextBox qualification,TextBox expertise,TextBox location,TextBox availability,TextBox hourlyRate,PictureBox p)
         {
             name.Text = data["Name"].ToString();
@@ -37,7 +28,8 @@ namespace Wissen.DL
             location.Text = data["Location"].ToString();
             hourlyRate.Text = data["HourlyRate"].ToString();
             byte[] b = (byte[])data["Image"];
-            p.Image = ConvertBytesToImage(b);
+            general g=new general();
+            p.Image = g.ConvertBytesToImage(b);
         }
     }
 }

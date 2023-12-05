@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+The 'Review_CRUD' class handles:
+- Loading review data for a specific teacher ID from the database
+- Populating the FlowLayoutPanel with reviews for a given teacher ID
+- Adding a review for a teacher with the teacher ID, student ID, review message, and rating
+- Retrieving the average rating for a specific teacher ID
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -13,6 +21,7 @@ namespace Wissen.DL
 {
     public class Review_CRUD
     {
+        // Loads review data for a specific teacher ID
         public DataTable load_data(string teacher_id)
         {
             var con = Configuration.getInstance().getConnection();
@@ -23,6 +32,9 @@ namespace Wissen.DL
             da.Fill(dt);
             return dt;
         }
+
+        // Populates the FlowLayoutPanel with reviews for a given teacher ID
+
         public void populate_panel(FlowLayoutPanel flp,string teacher_id)
         {
             DataTable table = load_data(teacher_id);
@@ -32,6 +44,9 @@ namespace Wissen.DL
                 flp.Controls.Add(r);
             }
         }
+
+        // Adds a review for a teacher given the teacher ID, student ID, review message, and rating
+
         public void add_review(string t_id,string s_id,TextBox tb_review,TextBox tb_rate,FlowLayoutPanel flp)
         {
             general g = new general();
@@ -49,6 +64,9 @@ namespace Wissen.DL
             populate_panel(flp,t_id);
             flp.AutoScrollPosition = new Point(0, flp.VerticalScroll.Maximum);
         }
+
+        // Retrieves the average rating for a specific teacher ID
+
         public string average_rating(string teacher_id)
         {
             var con = Configuration.getInstance().getConnection();

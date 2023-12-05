@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+This C# code defines a 'Feedback_CRUD' class:
+- Manages loading, displaying, and adding feedback to a panel
+- Loads feedback from the database and populates the panel with feedback data
+- Adds feedback to the database and updates the panel accordingly
+- Utilizes SQL commands to interact with a database
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,6 +20,9 @@ namespace Wissen.DL
 {
     public class Feedback_CRUD
     {
+
+        // Function to load feedback from the database
+
         public DataTable load_feedback()
         {
             var con = Configuration.getInstance().getConnection();
@@ -21,6 +32,9 @@ namespace Wissen.DL
             da.Fill(dt);
             return dt;
         }
+
+        // Function to populate the panel with feedback data
+
         public void populate_panel(FlowLayoutPanel flp)
         {
             DataTable data=load_feedback();
@@ -38,6 +52,9 @@ namespace Wissen.DL
                 flp.Controls.Add(lbl);
             }
         }
+
+        // Function to add feedback to the database and update the panel
+
         public void add_feedback(FlowLayoutPanel flp,string name,string message)
         {
             if (string.IsNullOrEmpty(name)==false && string.IsNullOrEmpty(message)==false)

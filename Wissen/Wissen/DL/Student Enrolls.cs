@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+The 'Student_Enrolls' class manages the enrollment process for a student with a teacher for a session:
+- Handles the enrollment process by validating date, time, and processing the enrollment details to add a record in the database.
+- Checks if the selected date is valid (at least one day after today) before enrolling.
+- Verifies if the time slot provided is valid (at least 1-hour duration) before enrolling and displays an error message for an invalid format.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -12,14 +19,14 @@ namespace Wissen.DL
 {
     public class Student_Enrolls
     {
-        public void enroll(string tea_id, string subject, DateTimePicker date, string starttime, string endtime)
+        // Method to handle the enrollment process for a student with a teacher for a session
+        public void enroll(string stu_id,string tea_id, string subject, DateTimePicker date, string starttime, string endtime)
         {
             if(is_date_valid(date) && is_time_valid(starttime,endtime))
             {
                     var con = Configuration.getInstance().getConnection();
                     SqlCommand cmd = new SqlCommand("EXEC student_enroll @Stu_id=@Stu_id1,@Tea_id=@Tea_id1,@Subject=@Subject1,@Date=@Date1,@Starttime=@Starttime1,@Endtime=@Endtime1;", con);
-                    string id = get_id();
-                    cmd.Parameters.AddWithValue("@Stu_id1", id);
+                    cmd.Parameters.AddWithValue("@Stu_id1", stu_id);
                     cmd.Parameters.AddWithValue("@Tea_id1", tea_id);
                     cmd.Parameters.AddWithValue("@Subject1", subject);
                     cmd.Parameters.AddWithValue("@Date1", date.Value.ToString());
@@ -37,6 +44,9 @@ namespace Wissen.DL
                 MessageBox.Show("The time difference should be at least 1 hour!", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        // Method to check if the selected date is valid (at least one day after today)
+
         public bool is_date_valid(DateTimePicker d)
         {
             DateTime current = DateTime.Now;
@@ -47,14 +57,10 @@ namespace Wissen.DL
             }
             return false;
         }
-        public string get_id()
-        {
-            StreamReader sr = new StreamReader("File.txt");
-            string line = sr.ReadLine();
-            sr.Close();
-            return line;
-        }
-        static bool is_time_valid(string time1, string time2)
+
+        // Method to check if the time slot provided is valid (at least 1-hour duration)
+
+        private bool is_time_valid(string time1, string time2)
         {
             if (DateTime.TryParseExact(time1, "HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime t1)
                 && DateTime.TryParseExact(time2, "HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime t2))

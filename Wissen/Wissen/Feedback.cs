@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+The 'Feedback' class manages user feedback:
+- Displays a panel with existing feedback upon form loading using 'Feedback_CRUD'.
+- Allows users to add new feedback via a text box and a button.
+- Utilizes 'Feedback_CRUD' methods to interact with the feedback data.
+- Provides default text for the message and name input fields.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,12 +31,28 @@ namespace Wissen
 
         private void Feedback_Load(object sender, EventArgs e)
         {
-            feedback.populate_panel(flp_feedback);
+            try
+            {
+                feedback.populate_panel(flp_feedback);
+            }
+            catch (Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
 
         private void b_add_Click(object sender, EventArgs e)
         {
-            feedback.add_feedback(flp_feedback, tb_name.Text, tb_message.Text);
+            try
+            {
+                feedback.add_feedback(flp_feedback, tb_name.Text, tb_message.Text);
+            }
+            catch(Exception ex) 
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }

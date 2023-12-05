@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+   The 'Notification' UserControl manages individual notifications.
+   It utilizes a DataRow to display notification messages and enables users to remove notifications.
+   This component serves to exhibit notifications and supports their removal functionality.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,9 +29,17 @@ namespace Wissen
 
         private void b_remove_Click(object sender, EventArgs e)
         {
-            Notification_CRUD n=new Notification_CRUD();
-            n.remove_notification(data["ID"].ToString());
-            this.Dispose();
+            try
+            {
+                Notification_CRUD n = new Notification_CRUD();
+                n.remove_notification(data["ID"].ToString());
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                general g = new general();
+                g.report_error(ex);
+            }
         }
     }
 }
