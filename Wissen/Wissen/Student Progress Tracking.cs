@@ -24,11 +24,16 @@ namespace Wissen
     {
         DataRow data;
         Assignment_CRUD a=new Assignment_CRUD();
+
+        // Constructor: Initializes the Student_Progress_Tracking form with user information
+
         public Student_Progress_Tracking(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Event handler triggered when the Student_Progress_Tracking form is loaded
 
         private void Student_Progress_Tracking_Load(object sender, EventArgs e)
         {

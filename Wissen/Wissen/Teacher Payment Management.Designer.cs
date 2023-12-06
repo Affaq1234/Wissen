@@ -58,7 +58,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 563);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -75,7 +75,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(922, 94);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // p_logo
@@ -103,7 +103,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(902, 440);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(922, 457);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // gv_payments
@@ -117,7 +117,7 @@
             this.gv_payments.ReadOnly = true;
             this.gv_payments.RowHeadersWidth = 51;
             this.gv_payments.RowTemplate.Height = 24;
-            this.gv_payments.Size = new System.Drawing.Size(896, 346);
+            this.gv_payments.Size = new System.Drawing.Size(916, 359);
             this.gv_payments.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -130,11 +130,11 @@
             this.tableLayoutPanel4.Controls.Add(this.b_send_notification, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.b_verify, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 355);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 368);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(896, 82);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(916, 86);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // b_remove
@@ -143,7 +143,7 @@
             this.b_remove.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_remove.ForeColor = System.Drawing.Color.White;
-            this.b_remove.Location = new System.Drawing.Point(681, 24);
+            this.b_remove.Location = new System.Drawing.Point(698, 26);
             this.b_remove.MinimumSize = new System.Drawing.Size(130, 34);
             this.b_remove.Name = "b_remove";
             this.b_remove.Size = new System.Drawing.Size(130, 34);
@@ -158,7 +158,7 @@
             this.b_send_notification.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_send_notification.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_send_notification.ForeColor = System.Drawing.Color.White;
-            this.b_send_notification.Location = new System.Drawing.Point(379, 24);
+            this.b_send_notification.Location = new System.Drawing.Point(389, 26);
             this.b_send_notification.MinimumSize = new System.Drawing.Size(130, 34);
             this.b_send_notification.Name = "b_send_notification";
             this.b_send_notification.Size = new System.Drawing.Size(136, 34);
@@ -173,7 +173,7 @@
             this.b_verify.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_verify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_verify.ForeColor = System.Drawing.Color.White;
-            this.b_verify.Location = new System.Drawing.Point(84, 24);
+            this.b_verify.Location = new System.Drawing.Point(87, 26);
             this.b_verify.MinimumSize = new System.Drawing.Size(130, 34);
             this.b_verify.Name = "b_verify";
             this.b_verify.Size = new System.Drawing.Size(130, 34);
@@ -186,9 +186,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 546);
+            this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Teacher_Payment_Management";
             this.Text = "Teacher_Payment_Management";
             this.Load += new System.EventHandler(this.Teacher_Payment_Management_Load);

@@ -23,12 +23,16 @@ namespace Wissen
     {
         DataRow d;
         string student_id;
+
+        // Constructor: Initializes the Student_Enroll form with DataRow and student ID information
         public Student_Enroll(DataRow data,string stu_id)
         {
             InitializeComponent();
             d=data;
             student_id=stu_id;
         }
+
+        // Event handler for enrolling a student into a class when the enroll button is clicked
         private void b_enroll_Click(object sender, EventArgs e)
         {
             try

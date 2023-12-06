@@ -168,7 +168,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Teacher_Enrollments_Requests";
             this.Text = "Teacher_Enrollments_Requests";
             this.Load += new System.EventHandler(this.Teacher_Enrollments_Requests_Load);

@@ -38,6 +38,7 @@ namespace Wissen.DL
                 SqlCommand cmd = new SqlCommand("EXEC remove_favourite_student @t_id=@t_id1,@s_id=@s_id1;", con);
                 cmd.Parameters.AddWithValue("@t_id1", t_id);
                 cmd.Parameters.AddWithValue("@s_id1", s_id);
+                cmd.ExecuteNonQuery ();
             }
         }
         public void load_favourites(DataGridView gv,string t_id)

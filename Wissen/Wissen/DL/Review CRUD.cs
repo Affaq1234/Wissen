@@ -50,7 +50,7 @@ namespace Wissen.DL
         public void add_review(string t_id,string s_id,TextBox tb_review,TextBox tb_rate,FlowLayoutPanel flp)
         {
             general g = new general();
-            if (g.IsInteger(tb_rate.Text) && int.Parse(tb_rate.Text) < 6 && int.Parse(tb_rate.Text) > 0 && string.IsNullOrEmpty(tb_review.Text))
+            if (g.IsInteger(tb_rate.Text) && int.Parse(tb_rate.Text) < 6 && int.Parse(tb_rate.Text) > 0 && string.IsNullOrEmpty(tb_review.Text)==false)
             {
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("EXEC add_review @t_id=@t_id1,@s_id=@s_id1,@message=@message1,@rating=@rating1;", con);

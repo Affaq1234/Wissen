@@ -44,8 +44,8 @@
             this.tb_assignment_description = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.tb_assignment_title = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tb_assignment_title = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_logo)).BeginInit();
@@ -265,14 +265,6 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(910, 54);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
-            // tb_assignment_title
-            // 
-            this.tb_assignment_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_assignment_title.Location = new System.Drawing.Point(321, 16);
-            this.tb_assignment_title.Name = "tb_assignment_title";
-            this.tb_assignment_title.Size = new System.Drawing.Size(267, 22);
-            this.tb_assignment_title.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -283,13 +275,23 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Assignment title";
             // 
+            // tb_assignment_title
+            // 
+            this.tb_assignment_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_assignment_title.Location = new System.Drawing.Point(321, 16);
+            this.tb_assignment_title.Name = "tb_assignment_title";
+            this.tb_assignment_title.Size = new System.Drawing.Size(267, 22);
+            this.tb_assignment_title.TabIndex = 2;
+            // 
             // Add_Assignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Add_Assignment";
             this.Text = "Add_Assignment";
             this.tableLayoutPanel1.ResumeLayout(false);

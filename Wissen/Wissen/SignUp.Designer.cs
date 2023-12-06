@@ -982,8 +982,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(673, 612);
             this.Name = "SignUp";
             this.Text = "SignUp";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -26,12 +26,16 @@ namespace Wissen
         DataRow data;
         string cat;
         Find_Teachers f=new Find_Teachers();
+
+        // Constructor: Initializes the Relevent_Search form with a category string and DataRow object
         public Relevent_Search(string category,DataRow d)
         {
             InitializeComponent();
             this.data = d;
             cat = category;
         }
+
+        // Event handler triggered when the Relevent_Search form is loaded
 
         private void Relevent_Search_Load(object sender, EventArgs e)
         {

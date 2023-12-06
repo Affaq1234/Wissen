@@ -25,11 +25,15 @@ namespace Wissen
     {
         DataRow data;
         Teacher_Payments teacher_Payments = new Teacher_Payments();
+
+        //Initializes the form
         public Teacher_Payment_Management(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Teacher_Payment_Management_Load - Loads payment information specific to the teacher onto 'gv_payments' DataGridView.
 
         private void Teacher_Payment_Management_Load(object sender, EventArgs e)
         {
@@ -44,6 +48,8 @@ namespace Wissen
             }
         }
 
+        // b_send_notification_Click - Sends notifications to students related to payments using 'send_notification' from 'Teacher_Payments'.
+
         private void b_send_notification_Click(object sender, EventArgs e)
         {
             try
@@ -57,6 +63,8 @@ namespace Wissen
             }
         }
 
+        // b_remove_Click - Removes fees using 'remove_fee' from 'Teacher_Payments'.
+
         private void b_remove_Click(object sender, EventArgs e)
         {
             try
@@ -69,6 +77,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // b_verify_Click - Verifies payments using 'verify_fee' from 'Teacher_Payments'.
 
         private void b_verify_Click(object sender, EventArgs e)
         {

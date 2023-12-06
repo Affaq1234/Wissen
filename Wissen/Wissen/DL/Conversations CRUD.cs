@@ -76,7 +76,7 @@ namespace Wissen.DL
 
         public void add_message(DataRow users, string message, string conversation_id, FlowLayoutPanel flp)
         {
-            if (string.IsNullOrEmpty(message))
+            if (string.IsNullOrEmpty(message)==false)
             {
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("EXEC send_message @c_id=@c_id1,@s_id=@s_id1,@message=@message1;", con);
@@ -84,14 +84,6 @@ namespace Wissen.DL
                 cmd.Parameters.AddWithValue("@s_id1", users["ID"].ToString());
                 cmd.Parameters.AddWithValue("@message1", message);
                 cmd.ExecuteNonQuery();
-                if (users["Type"].ToString() == "Teacher")
-                {
-                    add_teacher_message(flp, message);
-                }
-                else
-                {
-                    add_student_message(flp, message);
-                }
             }
             else
             {
@@ -135,8 +127,9 @@ namespace Wissen.DL
         public void add_new_conversations(string conversation_id, DataRow user, DataRow other, FlowLayoutPanel flp)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("EXEC check_conversation_change @c_id=@c_id1;", con);
+            SqlCommand cmd = new SqlCommand("EXEC check_conversation_change @c_id=@c_id1,@role=@role1;", con);
             cmd.Parameters.AddWithValue("@c_id1", conversation_id);
+            cmd.Parameters.AddWithValue("@role1", user["Type"].ToString());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

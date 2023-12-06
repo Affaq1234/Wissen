@@ -49,6 +49,7 @@ namespace Wissen.DL
                 string name = dr["Name"].ToString();
                 string message = dr["Message"].ToString();
                 lbl.Text = name+"\n"+message;
+                lbl.Padding = new Padding(5, 5, 5, 5);
                 flp.Controls.Add(lbl);
             }
         }

@@ -22,11 +22,15 @@ namespace Wissen
     public partial class View_Enrolled_Students : Form
     {
         string t_id;
+
+        // Constructor initializes the 'View_Enrolled_Students' form with the teacher's ID.
         public View_Enrolled_Students(string teacher_id)
         {
             InitializeComponent();
             t_id = teacher_id;
         }
+
+        // View_Enrolled_Students_Load - Populates DataGridView with enrolled students' information upon form load.
 
         private void View_Enrolled_Students_Load(object sender, EventArgs e)
         {

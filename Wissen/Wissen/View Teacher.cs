@@ -27,12 +27,17 @@ namespace Wissen
         DataRow data;
         string stu_id;
         Chat_CRUD chat_crud=new Chat_CRUD();
+
+        // Constructor for 'View_Teacher' form taking teacher's DataRow and student's ID.
+
         public View_Teacher(DataRow d,string student_id)
         {
             InitializeComponent();
             data = d;
             stu_id = student_id;
         }
+
+        // View_Teacher_Load - Populates teacher details into respective controls upon form load.
 
         private void View_Teacher_Load(object sender, EventArgs e)
         {
@@ -46,6 +51,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // b_enroll_Click - Handles student enrollment with the displayed teacher upon button click.
 
         private void b_enroll_Click(object sender, EventArgs e)
         {
@@ -62,10 +69,15 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // show - Helper method to show the form after hiding it during student enrollment.
+
         private void show(object o,EventArgs e) 
         {
             this.Show();
         }
+
+        // b_message_Click - Initiates a chat with the teacher upon button click.
 
         private void b_message_Click(object sender, EventArgs e)
         {
@@ -79,6 +91,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // b_reviews_Click - Displays and handles teacher reviews upon button click.
 
         private void b_reviews_Click(object sender, EventArgs e)
         {

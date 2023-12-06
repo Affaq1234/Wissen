@@ -39,14 +39,14 @@
             this.date_picker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.tb_start = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tb_end = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.b_enroll = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.p_logo = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.tb_start = new System.Windows.Forms.MaskedTextBox();
-            this.tb_end = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -193,6 +193,16 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Start time";
             // 
+            // tb_start
+            // 
+            this.tb_start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_start.Location = new System.Drawing.Point(323, 11);
+            this.tb_start.Mask = "00:00";
+            this.tb_start.Name = "tb_start";
+            this.tb_start.Size = new System.Drawing.Size(268, 22);
+            this.tb_start.TabIndex = 5;
+            this.tb_start.ValidatingType = typeof(System.DateTime);
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 3;
@@ -208,6 +218,16 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(916, 44);
             this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // tb_end
+            // 
+            this.tb_end.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_end.Location = new System.Drawing.Point(323, 11);
+            this.tb_end.Mask = "00:00";
+            this.tb_end.Name = "tb_end";
+            this.tb_end.Size = new System.Drawing.Size(268, 22);
+            this.tb_end.TabIndex = 6;
+            this.tb_end.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
@@ -271,33 +291,15 @@
             this.textBox4.Size = new System.Drawing.Size(268, 22);
             this.textBox4.TabIndex = 2;
             // 
-            // tb_start
-            // 
-            this.tb_start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_start.Location = new System.Drawing.Point(323, 11);
-            this.tb_start.Mask = "00:00";
-            this.tb_start.Name = "tb_start";
-            this.tb_start.Size = new System.Drawing.Size(268, 22);
-            this.tb_start.TabIndex = 5;
-            this.tb_start.ValidatingType = typeof(System.DateTime);
-            // 
-            // tb_end
-            // 
-            this.tb_end.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_end.Location = new System.Drawing.Point(323, 11);
-            this.tb_end.Mask = "00:00";
-            this.tb_end.Name = "tb_end";
-            this.tb_end.Size = new System.Drawing.Size(268, 22);
-            this.tb_end.TabIndex = 6;
-            this.tb_end.ValidatingType = typeof(System.DateTime);
-            // 
             // Student_Enroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Student_Enroll";
             this.Text = "Student_Enroll";
             this.tableLayoutPanel1.ResumeLayout(false);

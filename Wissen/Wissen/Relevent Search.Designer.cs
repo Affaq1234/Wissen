@@ -50,7 +50,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 563);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -67,7 +67,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(922, 94);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // p_logo
@@ -88,16 +88,18 @@
             this.flp_relevent_teachers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp_relevent_teachers.Location = new System.Drawing.Point(3, 103);
             this.flp_relevent_teachers.Name = "flp_relevent_teachers";
-            this.flp_relevent_teachers.Size = new System.Drawing.Size(902, 440);
+            this.flp_relevent_teachers.Size = new System.Drawing.Size(922, 457);
             this.flp_relevent_teachers.TabIndex = 7;
             // 
             // Relevent_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 546);
+            this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Relevent_Search";
             this.Text = "Relevent_Search";
             this.Load += new System.EventHandler(this.Relevent_Search_Load);

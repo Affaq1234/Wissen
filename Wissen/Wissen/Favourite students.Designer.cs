@@ -34,19 +34,19 @@
             this.p_logo = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.b_add = new System.Windows.Forms.Button();
             this.b_remove = new System.Windows.Forms.Button();
+            this.b_add = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.gv_bookings = new System.Windows.Forms.DataGridView();
             this.gv_favourites = new System.Windows.Forms.DataGridView();
+            this.gv_bookings = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_logo)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_bookings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_favourites)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_bookings)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -61,7 +61,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 563);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -78,7 +78,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(922, 94);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // p_logo
@@ -106,7 +106,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(902, 440);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(922, 457);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // tableLayoutPanel4
@@ -117,27 +117,12 @@
             this.tableLayoutPanel4.Controls.Add(this.b_remove, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.b_add, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 355);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 368);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(896, 82);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(916, 86);
             this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // b_add
-            // 
-            this.b_add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.b_add.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.b_add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b_add.ForeColor = System.Drawing.Color.White;
-            this.b_add.Location = new System.Drawing.Point(159, 24);
-            this.b_add.MinimumSize = new System.Drawing.Size(130, 34);
-            this.b_add.Name = "b_add";
-            this.b_add.Size = new System.Drawing.Size(130, 34);
-            this.b_add.TabIndex = 11;
-            this.b_add.Text = "Add";
-            this.b_add.UseVisualStyleBackColor = false;
-            this.b_add.Click += new System.EventHandler(this.b_add_Click);
             // 
             // b_remove
             // 
@@ -145,7 +130,7 @@
             this.b_remove.BackColor = System.Drawing.SystemColors.HotTrack;
             this.b_remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_remove.ForeColor = System.Drawing.Color.White;
-            this.b_remove.Location = new System.Drawing.Point(607, 24);
+            this.b_remove.Location = new System.Drawing.Point(622, 26);
             this.b_remove.MinimumSize = new System.Drawing.Size(130, 34);
             this.b_remove.Name = "b_remove";
             this.b_remove.Size = new System.Drawing.Size(130, 34);
@@ -153,6 +138,21 @@
             this.b_remove.Text = "Remove";
             this.b_remove.UseVisualStyleBackColor = false;
             this.b_remove.Click += new System.EventHandler(this.b_remove_Click);
+            // 
+            // b_add
+            // 
+            this.b_add.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_add.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.b_add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.b_add.ForeColor = System.Drawing.Color.White;
+            this.b_add.Location = new System.Drawing.Point(164, 26);
+            this.b_add.MinimumSize = new System.Drawing.Size(130, 34);
+            this.b_add.Name = "b_add";
+            this.b_add.Size = new System.Drawing.Size(130, 34);
+            this.b_add.TabIndex = 11;
+            this.b_add.Text = "Add";
+            this.b_add.UseVisualStyleBackColor = false;
+            this.b_add.Click += new System.EventHandler(this.b_add_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -166,8 +166,22 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(896, 346);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(916, 359);
             this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // gv_favourites
+            // 
+            this.gv_favourites.AllowUserToAddRows = false;
+            this.gv_favourites.AllowUserToDeleteRows = false;
+            this.gv_favourites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_favourites.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gv_favourites.Location = new System.Drawing.Point(461, 3);
+            this.gv_favourites.Name = "gv_favourites";
+            this.gv_favourites.ReadOnly = true;
+            this.gv_favourites.RowHeadersWidth = 51;
+            this.gv_favourites.RowTemplate.Height = 24;
+            this.gv_favourites.Size = new System.Drawing.Size(452, 353);
+            this.gv_favourites.TabIndex = 1;
             // 
             // gv_bookings
             // 
@@ -180,30 +194,18 @@
             this.gv_bookings.ReadOnly = true;
             this.gv_bookings.RowHeadersWidth = 51;
             this.gv_bookings.RowTemplate.Height = 24;
-            this.gv_bookings.Size = new System.Drawing.Size(442, 340);
+            this.gv_bookings.Size = new System.Drawing.Size(452, 353);
             this.gv_bookings.TabIndex = 0;
-            // 
-            // gv_favourites
-            // 
-            this.gv_favourites.AllowUserToAddRows = false;
-            this.gv_favourites.AllowUserToDeleteRows = false;
-            this.gv_favourites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_favourites.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gv_favourites.Location = new System.Drawing.Point(451, 3);
-            this.gv_favourites.Name = "gv_favourites";
-            this.gv_favourites.ReadOnly = true;
-            this.gv_favourites.RowHeadersWidth = 51;
-            this.gv_favourites.RowTemplate.Height = 24;
-            this.gv_favourites.Size = new System.Drawing.Size(442, 340);
-            this.gv_favourites.TabIndex = 1;
             // 
             // Favourite_students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 546);
+            this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Favourite_students";
             this.Text = "Favourite_students";
             this.Load += new System.EventHandler(this.Favourite_students_Load);
@@ -213,8 +215,8 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_bookings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_favourites)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_bookings)).EndInit();
             this.ResumeLayout(false);
 
         }

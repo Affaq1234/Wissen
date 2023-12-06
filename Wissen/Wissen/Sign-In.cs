@@ -22,10 +22,13 @@ namespace Wissen
 {
     public partial class Sign_In : Form
     {
+        // Constructor: Initializes the Sign_In form
         public Sign_In()
         {
             InitializeComponent();
         }
+
+        // Handles placeholder text for the Email textbox when focused
 
         private void tb_Email_Enter(object sender, EventArgs e)
         {
@@ -36,6 +39,8 @@ namespace Wissen
             }
         }
 
+        // Handles placeholder text for the Password textbox when focus is lost
+
         private void tb_Password_Leave(object sender, EventArgs e)
         {
             if (tb_Password.Text == "")
@@ -44,6 +49,8 @@ namespace Wissen
                 tb_Password.ForeColor = Color.Gray;
             }
         }
+
+        // Handles placeholder text for the Email textbox when focus is lost
 
         private void tb_Email_Leave(object sender, EventArgs e)
         {
@@ -54,6 +61,8 @@ namespace Wissen
             }
         }
 
+        // Handles placeholder text for the Password textbox when focused
+
         private void tb_Password_Enter(object sender, EventArgs e)
         {
             if (tb_Password.Text == "Password")
@@ -62,6 +71,8 @@ namespace Wissen
                 tb_Password.ForeColor = Color.Black;
             }
         }
+
+        // Event handler for the Login button click
 
         private void b_Login_Click(object sender, EventArgs e)
         {
@@ -77,16 +88,23 @@ namespace Wissen
             }
         }
 
+        // Event handler for the Sign Up button click
+
         private void b_sign_up_Click(object sender, EventArgs e)
         {
             SignUp s = new SignUp();
             s.ShowDialog();
             s.FormClosed += new FormClosedEventHandler(closed);
         }
+
+        // Trigger event when previous form is closed
+
         private void closed(object o,EventArgs e) 
         {
             this.Show();
         }
+
+        // Event handler for the Feedback button click
 
         private void b_Feedback_Click(object sender, EventArgs e)
         {

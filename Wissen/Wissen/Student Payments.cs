@@ -24,11 +24,15 @@ namespace Wissen
     {
         DataRow data;
         Student_Payment s=new Student_Payment();
+
+        // Constructor: Initializes the Student_Payments form with user information
         public Student_Payments(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Event handler for verifying payments initiated by the student
 
         private void b_verify_Click(object sender, EventArgs e)
         {
@@ -42,6 +46,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler triggered when the Student_Payments form is loaded
 
         private void Student_Payments_Load(object sender, EventArgs e)
         {

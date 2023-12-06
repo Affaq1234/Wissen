@@ -23,11 +23,15 @@ namespace Wissen
     {
         Find_Teachers teachers = new Find_Teachers();
         DataRow data;
+
+        // Constructor: Initializes the Find_Teacher form with specific user data
         public Find_Teacher(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Event handler for basic search when the search button is clicked
 
         private void b_search_Click(object sender, EventArgs e)
         {
@@ -41,6 +45,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler for advanced search when the apply button is clicked
 
         private void b_apply_Click(object sender, EventArgs e)
         {

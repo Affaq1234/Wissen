@@ -25,6 +25,8 @@ namespace Wissen
         DataRow data;
         Main_CRUD Main = new Main_CRUD();
         ContextMenuStrip contextMenuStrip;
+
+        // Constructor: Initializes the Student_Main form with user information
         public Student_Main(DataRow d)
         {
             InitializeComponent();
@@ -40,6 +42,8 @@ namespace Wissen
             }
         }
 
+        // Event handler triggered when the Student_Main form is loaded
+
         private void Student_Main_Load(object sender, EventArgs e)
         {
             general g=new general();
@@ -53,13 +57,7 @@ namespace Wissen
             }
         }
 
-        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
-        {
-            if (e.Column == 0 && e.Row == 0)
-            {
-                e.Graphics.FillRectangle(Brushes.Gray, e.CellBounds);
-            }
-        }
+        // Event handlers for subject buttons to perform searches based on subject categories
 
         private void b_physics_Click(object sender, EventArgs e)
         {
@@ -96,6 +94,8 @@ namespace Wissen
             Relevent_Search relevent_Search = new Relevent_Search("English", data);
             relevent_Search.ShowDialog();
         }
+
+        // Event handler for displaying the context menu strip upon clicking the user profile image
 
         private void p_user_Click(object sender, EventArgs e)
         {

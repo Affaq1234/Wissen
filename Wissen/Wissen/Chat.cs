@@ -25,6 +25,8 @@ namespace Wissen
         DataRow data;
         string conversation_id;
         DataRow users;
+
+        // Constructor: Initializes the Chat form with specific user and conversation data
         public Chat(DataRow d,DataRow user)
         {
             try
@@ -42,6 +44,8 @@ namespace Wissen
             }
         }
 
+        // Event handler triggered when the Chat form is loaded
+
         private void Chat_Load(object sender, EventArgs e)
         {
             try
@@ -58,6 +62,8 @@ namespace Wissen
             }
         }
 
+        // Event handler for sending a message when the send button is clicked
+
         private void b_send_Click(object sender, EventArgs e)
         {
             try
@@ -70,6 +76,9 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler triggered when the form is shown
+
         private void showdown(object o,EventArgs e)
         {
             try
@@ -82,6 +91,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler for periodic checking of new messages
 
         private void time_check_Tick(object sender, EventArgs e)
         {

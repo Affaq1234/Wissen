@@ -24,11 +24,15 @@ namespace Wissen
     {
         DataRow data;
         User_Update update=new User_Update();
+
+        // Constructor initializes 'Update_Student' form and loads student data for updates.
         public Update_Student(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // b_update_Click - Updates the student's details based on user input.
 
         private void b_update_Click(object sender, EventArgs e)
         {
@@ -42,6 +46,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Update_Student_Load - Displays the student's profile image upon form loading.
 
         private void Update_Student_Load(object sender, EventArgs e)
         {

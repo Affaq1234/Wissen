@@ -24,10 +24,15 @@ namespace Wissen
     public partial class SignUp : Form
     {
         signup s=new signup();
+
+        // Constructor: Initializes the SignUp form
+
         public SignUp()
         {
             InitializeComponent();
         }
+
+        // Event handler for teacher registration button click
 
         private void b_teacher_register_Click(object sender, EventArgs e)
         {
@@ -42,6 +47,8 @@ namespace Wissen
             }
          }
 
+        // Event handler for student registration button click
+
         private void b_student_register_Click(object sender, EventArgs e)
         {
             try
@@ -54,6 +61,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler for browsing a profile picture for teachers
 
         private void b_browse_teacher_Click(object sender, EventArgs e)
         {
@@ -68,6 +77,8 @@ namespace Wissen
             }
         }
 
+        // Event handler for browsing a profile picture for students
+
         private void b_browse_student_Click(object sender, EventArgs e)
         {
             try
@@ -81,12 +92,16 @@ namespace Wissen
             }
         }
 
+        // Event handler for providing help regarding entering qualifications for teachers
+
         private void b_help_teacher_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Multiple qualifications and experties should be seprated by \'/\' \n" +
                 "For example, if we have multiple qualifications, you will write it as:\n" +
                 "BSCS/FSC/Matric","Help",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
+
+        // Event handler for providing help regarding entering subjects for students
 
         private void b_help_Student_Click(object sender, EventArgs e)
         {

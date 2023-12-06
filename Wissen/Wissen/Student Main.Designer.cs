@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 563);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -89,7 +89,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(922, 94);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // p_logo
@@ -108,7 +108,7 @@
             // 
             this.p_user.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.p_user.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.p_user.Location = new System.Drawing.Point(826, 18);
+            this.p_user.Location = new System.Drawing.Point(846, 18);
             this.p_user.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.p_user.Name = "p_user";
             this.p_user.Size = new System.Drawing.Size(61, 57);
@@ -145,7 +145,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(868, 417);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(888, 433);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // b_english
@@ -155,7 +155,7 @@
             this.b_english.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_english.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_english.ForeColor = System.Drawing.Color.White;
-            this.b_english.Location = new System.Drawing.Point(588, 376);
+            this.b_english.Location = new System.Drawing.Point(604, 392);
             this.b_english.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.b_english.MaximumSize = new System.Drawing.Size(270, 38);
             this.b_english.Name = "b_english";
@@ -172,7 +172,7 @@
             this.b_computer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_computer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_computer.ForeColor = System.Drawing.Color.White;
-            this.b_computer.Location = new System.Drawing.Point(299, 376);
+            this.b_computer.Location = new System.Drawing.Point(308, 392);
             this.b_computer.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.b_computer.MaximumSize = new System.Drawing.Size(270, 38);
             this.b_computer.Name = "b_computer";
@@ -189,7 +189,7 @@
             this.b_biology.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_biology.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_biology.ForeColor = System.Drawing.Color.White;
-            this.b_biology.Location = new System.Drawing.Point(10, 376);
+            this.b_biology.Location = new System.Drawing.Point(13, 392);
             this.b_biology.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.b_biology.MaximumSize = new System.Drawing.Size(270, 38);
             this.b_biology.Name = "b_biology";
@@ -203,10 +203,10 @@
             // 
             this.p_English.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_English.Image = ((System.Drawing.Image)(resources.GetObject("p_English.Image")));
-            this.p_English.Location = new System.Drawing.Point(593, 222);
+            this.p_English.Location = new System.Drawing.Point(606, 231);
             this.p_English.Margin = new System.Windows.Forms.Padding(15);
             this.p_English.Name = "p_English";
-            this.p_English.Size = new System.Drawing.Size(260, 136);
+            this.p_English.Size = new System.Drawing.Size(267, 143);
             this.p_English.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_English.TabIndex = 8;
             this.p_English.TabStop = false;
@@ -215,10 +215,10 @@
             // 
             this.p_computer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_computer.Image = ((System.Drawing.Image)(resources.GetObject("p_computer.Image")));
-            this.p_computer.Location = new System.Drawing.Point(304, 222);
+            this.p_computer.Location = new System.Drawing.Point(310, 231);
             this.p_computer.Margin = new System.Windows.Forms.Padding(15);
             this.p_computer.Name = "p_computer";
-            this.p_computer.Size = new System.Drawing.Size(259, 136);
+            this.p_computer.Size = new System.Drawing.Size(266, 143);
             this.p_computer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_computer.TabIndex = 7;
             this.p_computer.TabStop = false;
@@ -227,10 +227,10 @@
             // 
             this.p_biology.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_biology.Image = ((System.Drawing.Image)(resources.GetObject("p_biology.Image")));
-            this.p_biology.Location = new System.Drawing.Point(15, 222);
+            this.p_biology.Location = new System.Drawing.Point(15, 231);
             this.p_biology.Margin = new System.Windows.Forms.Padding(15);
             this.p_biology.Name = "p_biology";
-            this.p_biology.Size = new System.Drawing.Size(259, 136);
+            this.p_biology.Size = new System.Drawing.Size(265, 143);
             this.p_biology.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_biology.TabIndex = 6;
             this.p_biology.TabStop = false;
@@ -242,7 +242,7 @@
             this.b_mathematics.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_mathematics.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_mathematics.ForeColor = System.Drawing.Color.White;
-            this.b_mathematics.Location = new System.Drawing.Point(588, 169);
+            this.b_mathematics.Location = new System.Drawing.Point(604, 177);
             this.b_mathematics.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.b_mathematics.MaximumSize = new System.Drawing.Size(270, 38);
             this.b_mathematics.Name = "b_mathematics";
@@ -259,7 +259,7 @@
             this.b_chemistry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_chemistry.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_chemistry.ForeColor = System.Drawing.Color.White;
-            this.b_chemistry.Location = new System.Drawing.Point(299, 169);
+            this.b_chemistry.Location = new System.Drawing.Point(308, 177);
             this.b_chemistry.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.b_chemistry.MaximumSize = new System.Drawing.Size(270, 38);
             this.b_chemistry.Name = "b_chemistry";
@@ -273,10 +273,10 @@
             // 
             this.p_mathematics.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_mathematics.Image = ((System.Drawing.Image)(resources.GetObject("p_mathematics.Image")));
-            this.p_mathematics.Location = new System.Drawing.Point(593, 15);
+            this.p_mathematics.Location = new System.Drawing.Point(606, 15);
             this.p_mathematics.Margin = new System.Windows.Forms.Padding(15);
             this.p_mathematics.Name = "p_mathematics";
-            this.p_mathematics.Size = new System.Drawing.Size(260, 136);
+            this.p_mathematics.Size = new System.Drawing.Size(267, 143);
             this.p_mathematics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_mathematics.TabIndex = 2;
             this.p_mathematics.TabStop = false;
@@ -285,10 +285,10 @@
             // 
             this.p_chemistry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_chemistry.Image = ((System.Drawing.Image)(resources.GetObject("p_chemistry.Image")));
-            this.p_chemistry.Location = new System.Drawing.Point(304, 15);
+            this.p_chemistry.Location = new System.Drawing.Point(310, 15);
             this.p_chemistry.Margin = new System.Windows.Forms.Padding(15);
             this.p_chemistry.Name = "p_chemistry";
-            this.p_chemistry.Size = new System.Drawing.Size(259, 136);
+            this.p_chemistry.Size = new System.Drawing.Size(266, 143);
             this.p_chemistry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_chemistry.TabIndex = 1;
             this.p_chemistry.TabStop = false;
@@ -300,7 +300,7 @@
             this.p_physics.Location = new System.Drawing.Point(15, 15);
             this.p_physics.Margin = new System.Windows.Forms.Padding(15);
             this.p_physics.Name = "p_physics";
-            this.p_physics.Size = new System.Drawing.Size(259, 136);
+            this.p_physics.Size = new System.Drawing.Size(265, 143);
             this.p_physics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p_physics.TabIndex = 0;
             this.p_physics.TabStop = false;
@@ -312,7 +312,7 @@
             this.b_physics.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b_physics.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_physics.ForeColor = System.Drawing.Color.White;
-            this.b_physics.Location = new System.Drawing.Point(10, 169);
+            this.b_physics.Location = new System.Drawing.Point(13, 177);
             this.b_physics.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.b_physics.MaximumSize = new System.Drawing.Size(270, 38);
             this.b_physics.Name = "b_physics";
@@ -327,10 +327,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(908, 546);
+            this.ClientSize = new System.Drawing.Size(928, 563);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(946, 610);
             this.Name = "Student_Main";
             this.Text = "Student_Main";
             this.Load += new System.EventHandler(this.Student_Main_Load);

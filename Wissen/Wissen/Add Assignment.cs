@@ -22,11 +22,14 @@ namespace Wissen
     {
         Assignment_CRUD AC = new Assignment_CRUD();
         DataRow d;
+        // Constructor that initializes the form and accepts a DataRow parameter
         public Add_Assignment(DataRow data)
         {
             InitializeComponent();
             d = data;
         }
+
+        // Event handler for adding an assignment when the button is clicked
 
         private void b_add_Click(object sender, EventArgs e)
         {
@@ -40,6 +43,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler for viewing enrolled students when the button is clicked
 
         private void b_view_students_Click(object sender, EventArgs e)
         {

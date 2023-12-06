@@ -22,11 +22,15 @@ namespace Wissen
     {
         DataRow data;
         Notification_CRUD notification = new Notification_CRUD();
+
+        // Constructor: Initializes the Notification_Management form with specific user data
         public Notification_Management(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Event handler for removing all notifications for the current user when the button is clicked
 
         private void b_remove_all_Click(object sender, EventArgs e)
         {
@@ -40,6 +44,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler triggered when the Notification_Management form is loaded
 
         private void Notification_Management_Load(object sender, EventArgs e)
         {

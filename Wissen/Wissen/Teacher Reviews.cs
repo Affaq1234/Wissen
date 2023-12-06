@@ -30,6 +30,8 @@ namespace Wissen
         string t_id;
         string s_id;
         Review_CRUD r=new Review_CRUD();
+
+        // Constructor initializes 'Teacher_Reviews' form, loads teacher and student IDs, and displays average teacher rating.
         public Teacher_Reviews(string teacher_id,string student_id)
         {
             try
@@ -47,6 +49,8 @@ namespace Wissen
             }
         }
 
+        // b_give_Click - Adds a review with ratings from students for the specific teacher.
+
         private void b_give_Click(object sender, EventArgs e)
         {
             try
@@ -59,6 +63,9 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // load_data - Populates the review panel ('flp_review') with existing reviews for the teacher.
+
         private void load_data(object o,EventArgs e)
         {
             try

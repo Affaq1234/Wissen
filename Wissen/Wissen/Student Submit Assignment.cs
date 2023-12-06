@@ -23,11 +23,15 @@ namespace Wissen
     public partial class Student_Submit_Assignment : Form
     {
         string s_id;
+
+        // Constructor: Initializes the Student_Submit_Assignment form with the student's ID
         public Student_Submit_Assignment(string student_id)
         {
             InitializeComponent();
             s_id = student_id;
         }
+
+        // Event handler triggered upon clicking the 'b_upload' button to upload assignment files
 
         private void b_upload_Click(object sender, EventArgs e)
         {
@@ -42,6 +46,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler triggered when the Student_Submit_Assignment form is loaded
 
         private void Student_Submit_Assignment_Load(object sender, EventArgs e)
         {

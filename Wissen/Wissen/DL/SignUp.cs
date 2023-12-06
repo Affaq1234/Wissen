@@ -58,7 +58,7 @@ namespace Wissen.DL
             {
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("EXEC sign_up_teacher @name=@name1,@qualification=@qualification1,@expertise=@expertise1,@hourlyrate=@hourlyrate1,@availability=@availability1,@location=@location1,@email=@email1,@password=@password1,@img=@img1;", con);
-                cmd.Parameters.AddWithValue("@name1",email);
+                cmd.Parameters.AddWithValue("@name1",name);
                 cmd.Parameters.AddWithValue("@qualification1", qualification);
                 cmd.Parameters.AddWithValue("@expertise1",expertise);
                 cmd.Parameters.AddWithValue("@hourlyrate1",hourlyRate);
@@ -108,7 +108,7 @@ namespace Wissen.DL
             {
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("EXEC sign_up_student @name=@name1,@class=@class1,@subjects=@subjects1,@email=@email1,@password=@password1,@img=@img1;", con);
-                cmd.Parameters.AddWithValue("@name1", email);
+                cmd.Parameters.AddWithValue("@name1", name);
                 cmd.Parameters.AddWithValue("@class1", education);
                 cmd.Parameters.AddWithValue("@subjects1", subjects);
                 cmd.Parameters.AddWithValue("@email1", email);

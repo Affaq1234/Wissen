@@ -133,11 +133,13 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.Controls.Add(this.lb_sign_up, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.b_sign_up, 1, 0);
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lb_sign_up, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.b_sign_up, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 367);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -151,7 +153,7 @@
             this.lb_sign_up.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_sign_up.AutoSize = true;
             this.lb_sign_up.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sign_up.Location = new System.Drawing.Point(68, 31);
+            this.lb_sign_up.Location = new System.Drawing.Point(76, 31);
             this.lb_sign_up.Name = "lb_sign_up";
             this.lb_sign_up.Size = new System.Drawing.Size(185, 20);
             this.lb_sign_up.TabIndex = 0;
@@ -165,7 +167,7 @@
             this.b_sign_up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_sign_up.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_sign_up.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.b_sign_up.Location = new System.Drawing.Point(259, 20);
+            this.b_sign_up.Location = new System.Drawing.Point(267, 20);
             this.b_sign_up.Name = "b_sign_up";
             this.b_sign_up.Size = new System.Drawing.Size(92, 41);
             this.b_sign_up.TabIndex = 1;
@@ -182,8 +184,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(452, 588);
             this.Name = "Sign_In";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

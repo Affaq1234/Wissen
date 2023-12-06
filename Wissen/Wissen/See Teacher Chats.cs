@@ -24,11 +24,15 @@ namespace Wissen
     {
         DataRow teacher;
         Chat_CRUD chat_crud=new Chat_CRUD();
+
+        // Constructor: Initializes the See_Teacher_Chats form with a DataRow representing the teacher
         public See_Teacher_Chats(DataRow tea)
         {
             InitializeComponent();
             this.teacher = tea;
         }
+
+        // Event handler triggered when the See_Teacher_Chats form is loaded
 
         private void See_Teacher_Chats_Load(object sender, EventArgs e)
         {

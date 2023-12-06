@@ -26,6 +26,9 @@ namespace Wissen
         Main_CRUD Main = new Main_CRUD();
         DataRow data;
         ContextMenuStrip contextMenuStrip;
+
+        // Constructor to initialize form and add teacher menu
+
         public Teacher_Main(DataRow d)
         {
             try
@@ -41,6 +44,8 @@ namespace Wissen
             }
         }
 
+        // Teacher_Main_Load - Loads the teacher's profile image into 'p_user' PictureBox upon form load.
+
         private void Teacher_Main_Load(object sender, EventArgs e)
         {
             try
@@ -54,6 +59,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // p_user_Click - Handles PictureBox click events, displays the context menu using 'cycle_context_menu' from 'Main_CRUD'.
 
         private void p_user_Click(object sender, EventArgs e)
         {

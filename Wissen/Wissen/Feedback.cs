@@ -22,12 +22,16 @@ namespace Wissen
     public partial class Feedback : Form
     {
         Feedback_CRUD feedback=new Feedback_CRUD();
+
+        // Constructor: Initializes the Feedback form and sets default text for message and name input fields
         public Feedback()
         {
             InitializeComponent();
             tb_message.Text = "How was your expercience?";
             tb_name.Text = "Name";
         }
+
+        // Event handler triggered when the Feedback form is loaded
 
         private void Feedback_Load(object sender, EventArgs e)
         {
@@ -41,6 +45,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Event handler for adding feedback when the add button is clicked
 
         private void b_add_Click(object sender, EventArgs e)
         {

@@ -26,11 +26,16 @@ namespace Wissen
     public partial class Teacher_Assignmnet_Management : Form
     {
         DataRow data;
+
+        //Constructor Initializes the form
+
         public Teacher_Assignmnet_Management(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Handles the click event for adding new assignments. Opens the 'Add_Assignment' form and reloads assignments after closure.
 
         private void b_add_Click(object sender, EventArgs e)
         {
@@ -48,6 +53,8 @@ namespace Wissen
             }
         }
 
+        // Manages the click event for removing assignments. Removes the selected assignment and reloads the list.
+
         private void b_remove_Click(object sender, EventArgs e)
         {
             try
@@ -62,12 +69,17 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Handles the closure event of the 'Add_Assignment' form. Shows the main form and reloads the assignments.
+
         private void closed(object o,EventArgs e)
         {
             this.Show();
             Assignment_CRUD a = new Assignment_CRUD();
             a.load_teacher_assignments(gv_assignment, data["ID"].ToString());
         }
+
+        // Manages the click event for downloading assignment files.
 
         private void b_download_file_Click(object sender, EventArgs e)
         {
@@ -82,6 +94,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // Loads existing teacher assignments into the DataGridView upon form load using 'Assignment_CRUD'.
 
         private void Teacher_Assignmnet_Management_Load(object sender, EventArgs e)
         {

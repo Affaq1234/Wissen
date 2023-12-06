@@ -25,11 +25,16 @@ namespace Wissen
     {
         DataRow data;
         Teacher_Enrollment_Request request=new Teacher_Enrollment_Request();
+
+        //Constructor to initialize form
+
         public Teacher_Enrollments_Requests(DataRow d)
         {
             InitializeComponent();
             data = d;
         }
+
+        // Teacher_Enrollments_Requests_Load - Loads enrollment requests into the 'gv_bookings' DataGridView upon form load.
 
         private void Teacher_Enrollments_Requests_Load(object sender, EventArgs e)
         {
@@ -44,6 +49,8 @@ namespace Wissen
             }
         }
 
+        // b_accept_Click - Accepts enrollment requests, updates enrollment status, and refreshes displayed requests.
+
         private void b_accept_Click(object sender, EventArgs e)
         {
             try
@@ -57,6 +64,8 @@ namespace Wissen
                 g.report_error(ex);
             }
         }
+
+        // b_decline_Click - Declines enrollment requests, cancels request, and refreshes displayed requests.
 
         private void b_decline_Click(object sender, EventArgs e)
         {
